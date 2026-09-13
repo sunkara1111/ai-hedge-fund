@@ -41,7 +41,73 @@
         "detail": "$100.0 \u00b7 0.5%",
         "tone": "neutral"
       },
-      "rationale": "Market Scout scanned 7 names.\nFocus ticker: RIVN (RIVN Corp (demo)) @ $100.0\nDay change: 0.5% | Sector: Unknown\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)\n  #4 TSLA: score=46.75 (2.35% / mom5d=-0.72%)"
+      "rationale": "Market Scout scanned 7 names.\nFocus ticker: RIVN (RIVN Corp (demo)) @ $100.0\nDay change: 0.5% | Sector: Unknown\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)\n  #4 TSLA: score=46.75 (2.35% / mom5d=-0.72%)",
+      "monitor": {
+        "screen_title": "UNIVERSE SCAN",
+        "chart": {
+          "kind": "bars",
+          "points": [
+            46.3,
+            47.6,
+            53.9,
+            48.7,
+            56.0,
+            59.3,
+            51.1,
+            55.4,
+            55.7,
+            53.5
+          ],
+          "bars": [
+            {
+              "t": "GOOGL",
+              "v": 58
+            },
+            {
+              "t": "AMZN",
+              "v": 50
+            },
+            {
+              "t": "NVDA",
+              "v": 49
+            },
+            {
+              "t": "TSLA",
+              "v": 47
+            },
+            {
+              "t": "META",
+              "v": 47
+            }
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Focus",
+            "v": "$100.0 \u00b7 0.5%"
+          },
+          {
+            "k": "Opp score",
+            "v": "\u2014"
+          },
+          {
+            "k": "Universe",
+            "v": "7 names"
+          }
+        ],
+        "gauge": null,
+        "pills": [
+          {
+            "label": "scouted",
+            "tone": "neutral"
+          },
+          {
+            "label": "SCOUTED",
+            "tone": "neutral"
+          }
+        ],
+        "rationale_short": "Focus ticker: RIVN (RIVN Corp (demo)) @ $100.0"
+      }
     },
     {
       "id": "technical",
@@ -55,7 +121,131 @@
         "detail": "overbought \u00b7 sideways",
         "tone": "neutral"
       },
-      "rationale": "Technical Analysis \u2014 RIVN\n  Price: $109.0\n  RSI(14): 100.0 \u2192 overbought\n  MACD: 0.0 | signal=0.0 | hist=0.0\n  SMA20: 99.5 | SMA50: 99.5 | EMA12: 103.73\n  Trend: sideways | Bias: overbought\n  Signal balance: 2 bullish / 2 bearish\n  Technical score: 45/100"
+      "rationale": "Technical Analysis \u2014 RIVN\n  Price: $109.0\n  RSI(14): 100.0 \u2192 overbought\n  MACD: 0.0 | signal=0.0 | hist=0.0\n  SMA20: 99.5 | SMA50: 99.5 | EMA12: 103.73\n  Trend: sideways | Bias: overbought\n  Signal balance: 2 bullish / 2 bearish\n  Technical score: 45/100",
+      "monitor": {
+        "screen_title": "CHART DESK",
+        "chart": {
+          "kind": "candles",
+          "candles": [
+            {
+              "o": 118,
+              "h": 120,
+              "l": 116,
+              "c": 117
+            },
+            {
+              "o": 117,
+              "h": 122,
+              "l": 115,
+              "c": 119
+            },
+            {
+              "o": 119,
+              "h": 125,
+              "l": 118,
+              "c": 124
+            },
+            {
+              "o": 124,
+              "h": 126,
+              "l": 119,
+              "c": 121
+            },
+            {
+              "o": 121,
+              "h": 124,
+              "l": 120,
+              "c": 121
+            },
+            {
+              "o": 121,
+              "h": 125,
+              "l": 119,
+              "c": 124
+            },
+            {
+              "o": 124,
+              "h": 126,
+              "l": 118,
+              "c": 119
+            },
+            {
+              "o": 119,
+              "h": 122,
+              "l": 115,
+              "c": 117
+            },
+            {
+              "o": 117,
+              "h": 119,
+              "l": 116,
+              "c": 118
+            },
+            {
+              "o": 118,
+              "h": 124,
+              "l": 116,
+              "c": 122
+            },
+            {
+              "o": 122,
+              "h": 125,
+              "l": 117,
+              "c": 118
+            },
+            {
+              "o": 118,
+              "h": 119,
+              "l": 115,
+              "c": 117
+            }
+          ],
+          "points": [
+            50.53,
+            49.4,
+            55.27,
+            54.13,
+            56.0,
+            55.87,
+            48.73,
+            53.6,
+            56.47,
+            52.33,
+            51.2,
+            57.07,
+            55.93,
+            57.8,
+            57.67,
+            50.53
+          ]
+        },
+        "metrics": [
+          {
+            "k": "RSI",
+            "v": "45"
+          },
+          {
+            "k": "Trend",
+            "v": "sideways"
+          },
+          {
+            "k": "Bias",
+            "v": "NEUTRAL"
+          }
+        ],
+        "gauge": {
+          "value": 45,
+          "max": 100,
+          "label": "Tech score"
+        },
+        "pills": [
+          {
+            "label": "HOLD",
+            "tone": "neutral"
+          }
+        ],
+        "rationale_short": "Price: $109.0"
+      }
     },
     {
       "id": "fundamental",
@@ -69,7 +259,53 @@
         "detail": "fairly valued",
         "tone": "bull"
       },
-      "rationale": "Fundamental Analysis \u2014 RIVN (RIVN Corp (demo))\n  Sector/Industry: Unknown / Unknown\n  Price: $100.0 | Market Cap: $50.0B\n  P/E: 20.00 | Forward P/E: 18.00\n  P/B: 3.00 | P/S: 2.50\n  EPS: 5.00 | ROE: 15.0%\n  Revenue growth: 8.0% | Profit margin: 12.0%\n  Debt/Equity: 0.50 | Beta: 1.00"
+      "rationale": "Fundamental Analysis \u2014 RIVN (RIVN Corp (demo))\n  Sector/Industry: Unknown / Unknown\n  Price: $100.0 | Market Cap: $50.0B\n  P/E: 20.00 | Forward P/E: 18.00\n  P/B: 3.00 | P/S: 2.50\n  EPS: 5.00 | ROE: 15.0%\n  Revenue growth: 8.0% | Profit margin: 12.0%\n  Debt/Equity: 0.50 | Beta: 1.00",
+      "monitor": {
+        "screen_title": "VALUATION",
+        "chart": {
+          "kind": "gauge",
+          "points": [
+            55.17,
+            57.0,
+            59.83,
+            59.67,
+            64.5,
+            70.33,
+            64.17,
+            63.0,
+            62.83,
+            59.67,
+            61.5,
+            64.33
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Score",
+            "v": "68"
+          },
+          {
+            "k": "Valuation",
+            "v": "fairly valued"
+          },
+          {
+            "k": "Quality",
+            "v": "Mixed"
+          }
+        ],
+        "gauge": {
+          "value": 68,
+          "max": 100,
+          "label": "Fund score"
+        },
+        "pills": [
+          {
+            "label": "BUY",
+            "tone": "bull"
+          }
+        ],
+        "rationale_short": "Sector/Industry: Unknown / Unknown"
+      }
     },
     {
       "id": "news",
@@ -83,7 +319,61 @@
         "detail": "1 headlines",
         "tone": "neutral"
       },
-      "rationale": "News & Catalyst Analysis \u2014 RIVN\n  Aggregate sentiment: neutral (score=0.0)\n  Breakdown: +0 / -0 / ~1\n  Headlines:\n    [NEUTRAL] RIVN in focus as markets digest macro data \u2014 DemoWire\n      No major company-specific catalysts in demo feed."
+      "rationale": "News & Catalyst Analysis \u2014 RIVN\n  Aggregate sentiment: neutral (score=0.0)\n  Breakdown: +0 / -0 / ~1\n  Headlines:\n    [NEUTRAL] RIVN in focus as markets digest macro data \u2014 DemoWire\n      No major company-specific catalysts in demo feed.",
+      "monitor": {
+        "screen_title": "NEWS FEED",
+        "chart": {
+          "kind": "sparkline",
+          "points": [
+            51.07,
+            54.8,
+            57.53,
+            52.27,
+            53.0,
+            52.73,
+            44.47,
+            51.2,
+            56.93,
+            54.67,
+            58.4,
+            61.13,
+            55.87,
+            56.6
+          ],
+          "feed": [
+            {
+              "t": "RIVN catalyst watch",
+              "when": "2h ago"
+            },
+            {
+              "t": "Sector flow update",
+              "when": "5h ago"
+            }
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Sentiment",
+            "v": "NEUTRAL"
+          },
+          {
+            "k": "Headlines",
+            "v": "1"
+          },
+          {
+            "k": "Catalysts",
+            "v": "\u2014"
+          }
+        ],
+        "gauge": null,
+        "pills": [
+          {
+            "label": "NEUTRAL",
+            "tone": "neutral"
+          }
+        ],
+        "rationale_short": "Aggregate sentiment: neutral (score=0.0)"
+      }
     },
     {
       "id": "quant",
@@ -97,7 +387,85 @@
         "detail": "Win 58.1%",
         "tone": "neutral"
       },
-      "rationale": "Quant Analysis \u2014 RIVN\n  Edge score: 53.9/100\n  Win probability: 58.1%\n  Expected return (scenario-weighted): 1.35%\n  Factor contributions:\n    Technical momentum: 45.0\n    Fundamental quality: 68.0\n    News sentiment: 50.0"
+      "rationale": "Quant Analysis \u2014 RIVN\n  Edge score: 53.9/100\n  Win probability: 58.1%\n  Expected return (scenario-weighted): 1.35%\n  Factor contributions:\n    Technical momentum: 45.0\n    Fundamental quality: 68.0\n    News sentiment: 50.0",
+      "monitor": {
+        "screen_title": "EDGE MODEL",
+        "chart": {
+          "kind": "donut",
+          "points": [
+            59.2,
+            61.5,
+            62.8,
+            60.1,
+            59.4,
+            57.7,
+            52.0,
+            57.3,
+            61.6,
+            61.9,
+            64.2,
+            65.5,
+            62.8,
+            62.1
+          ],
+          "donut": {
+            "value": 60.0,
+            "label": "Win %"
+          },
+          "bars": [
+            {
+              "t": "Moment",
+              "v": 60
+            },
+            {
+              "t": "Qualit",
+              "v": 55
+            },
+            {
+              "t": "Growth",
+              "v": 70
+            },
+            {
+              "t": "Value",
+              "v": 40
+            },
+            {
+              "t": "Vol",
+              "v": 35
+            }
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Edge",
+            "v": "53.9"
+          },
+          {
+            "k": "Win prob",
+            "v": "60%"
+          },
+          {
+            "k": "Expected",
+            "v": "\u2014"
+          }
+        ],
+        "gauge": {
+          "value": 53,
+          "max": 100,
+          "label": "Edge"
+        },
+        "pills": [
+          {
+            "label": "EDGE 53.9",
+            "tone": "neutral"
+          },
+          {
+            "label": "EDGE 54",
+            "tone": "neutral"
+          }
+        ],
+        "rationale_short": "Edge score: 53.9/100"
+      }
     },
     {
       "id": "risk",
@@ -111,7 +479,60 @@
         "detail": "technical overbought without exceptional edge",
         "tone": "bear"
       },
-      "rationale": "Risk Management \u2014 RIVN\n  Decision: REJECT\n  Portfolio value: $100,000\n  Proposed size: 0.00% ($0.00 / 0 shares @ $100.0)\n  Max position cap: 10.0%\n  Est. max loss (bear): $0.00\n  Beta: 1.0\n  Stress tests:"
+      "rationale": "Risk Management \u2014 RIVN\n  Decision: REJECT\n  Portfolio value: $100,000\n  Proposed size: 0.00% ($0.00 / 0 shares @ $100.0)\n  Max position cap: 10.0%\n  Est. max loss (bear): $0.00\n  Beta: 1.0\n  Stress tests:",
+      "monitor": {
+        "screen_title": "STRESS DESK",
+        "chart": {
+          "kind": "drawdown",
+          "points": [
+            19.4,
+            24.8,
+            25.2,
+            20.6,
+            20.0,
+            23.4,
+            12.8,
+            15.2,
+            21.6,
+            14.0,
+            19.4,
+            19.8,
+            15.2,
+            14.6
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Decision",
+            "v": "REJECT"
+          },
+          {
+            "k": "Max DD",
+            "v": "-18%"
+          },
+          {
+            "k": "Size",
+            "v": "0%"
+          }
+        ],
+        "gauge": {
+          "value": 28,
+          "max": 100,
+          "label": "HIGH RISK",
+          "invert": true
+        },
+        "pills": [
+          {
+            "label": "REJECT",
+            "tone": "bear"
+          },
+          {
+            "label": "CAPITAL SAVED",
+            "tone": "bear"
+          }
+        ],
+        "rationale_short": "Decision: REJECT"
+      }
     },
     {
       "id": "portfolio",
@@ -125,7 +546,53 @@
         "detail": "0.00% alloc",
         "tone": "bear"
       },
-      "rationale": "Portfolio Manager skipped \u2014 trade REJECTED by Risk Manager.\nReason: technical overbought without exceptional edge"
+      "rationale": "Portfolio Manager skipped \u2014 trade REJECTED by Risk Manager.\nReason: technical overbought without exceptional edge",
+      "monitor": {
+        "screen_title": "FINAL MEMO",
+        "chart": {
+          "kind": "allocation",
+          "points": [
+            47.77,
+            52.2,
+            51.63,
+            51.07,
+            49.5,
+            51.93,
+            45.37,
+            46.8,
+            52.23,
+            48.67,
+            53.1,
+            52.53
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Action",
+            "v": "PASS (RISK REJECTE"
+          },
+          {
+            "k": "Alloc",
+            "v": "0.00% alloc"
+          },
+          {
+            "k": "Memo",
+            "v": "READY"
+          }
+        ],
+        "gauge": {
+          "value": 0,
+          "max": 100,
+          "label": "Conviction"
+        },
+        "pills": [
+          {
+            "label": "PASS (RISK REJECTED)",
+            "tone": "bear"
+          }
+        ],
+        "rationale_short": "Reason: technical overbought without exceptional edge"
+      }
     }
   ],
   "memo": {
@@ -223,5 +690,41 @@
   "scan_ranking": [],
   "example_id": "reject",
   "example_title": "Example C \u2014 Risk Manager REJECTS (capital protection)",
-  "example_blurb": "Educational sample: Risk Manager returns REJECT \u00b7 Portfolio Manager ships PASS (risk rejected) with 0% allocation. Shows how the floor protects paper capital."
+  "example_blurb": "Educational sample: Risk Manager returns REJECT \u00b7 Portfolio Manager ships PASS (risk rejected) with 0% allocation. Shows how the floor protects paper capital.",
+  "hero": {
+    "ticker": "RIVN",
+    "name": "Rivian Automotive (demo sample)",
+    "price": 100.0,
+    "change_pct": 0.5,
+    "recommendation": "PASS (risk rejected)",
+    "edge_score": 53.9,
+    "win_probability": 58.1,
+    "allocation_pct": 0.0,
+    "trade_rejected": true
+  },
+  "combined_banner": {
+    "title": "COMBINED RESULT",
+    "subtitle": "Risk gate preserved capital",
+    "recommendation": "PASS (risk rejected)",
+    "headline": "RIVN \u00b7 PASS (risk rejected)",
+    "stats": [
+      {
+        "k": "Edge",
+        "v": "53.9"
+      },
+      {
+        "k": "Win",
+        "v": "58.1%"
+      },
+      {
+        "k": "Alloc",
+        "v": "0.0%"
+      },
+      {
+        "k": "Expected",
+        "v": "1.35%"
+      }
+    ],
+    "tone": "bear"
+  }
 }

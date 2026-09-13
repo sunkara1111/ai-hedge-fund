@@ -46,7 +46,12 @@
           "tone": "neutral"
         }
       ],
-      "memo_callout": "HOLD / WATCH \u00b7 ~5.8% paper alloc \u00b7 edge 56.4"
+      "memo_callout": "HOLD / WATCH \u00b7 ~5.8% paper alloc \u00b7 edge 56.4",
+      "price": 248.5,
+      "change_pct": 2.35,
+      "edge": 56.4,
+      "hero_tag": "FULL WALKTHROUGH",
+      "story": "Input TSLA \u2192 7 agent floors analyze \u2192 Combined Result HOLD / WATCH"
     },
     {
       "id": "nvda",
@@ -94,7 +99,12 @@
           "tone": "bull"
         }
       ],
-      "memo_callout": "BUY \u00b7 edge 66.7 \u00b7 paper research sample"
+      "memo_callout": "BUY \u00b7 edge 66.7 \u00b7 paper research sample",
+      "price": 128.4,
+      "change_pct": 3.1,
+      "edge": 66.7,
+      "hero_tag": "BUY GALLERY",
+      "story": "Input NVDA \u2192 bullish floors align \u2192 Combined Result BUY"
     },
     {
       "id": "reject",
@@ -142,7 +152,12 @@
           "tone": "bear"
         }
       ],
-      "memo_callout": "PASS (risk rejected) \u00b7 0% allocation \u00b7 technical overbought without exceptional edge"
+      "memo_callout": "PASS (risk rejected) \u00b7 0% allocation \u00b7 technical overbought without exceptional edge",
+      "price": 100.0,
+      "change_pct": 0.5,
+      "edge": 53.9,
+      "hero_tag": "CAPITAL PROTECTION",
+      "story": "Input RIVN \u2192 Risk REJECTS \u2192 Combined Result PASS (capital protected)"
     }
   ]
 }

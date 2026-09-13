@@ -41,7 +41,73 @@
         "detail": "$128.4 \u00b7 3.1%",
         "tone": "neutral"
       },
-      "rationale": "Market Scout scanned 7 names.\nFocus ticker: NVDA (NVIDIA Corporation) @ $128.4\nDay change: 3.1% | Sector: Technology\nOpportunity rank: #3 | score=48.8\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)"
+      "rationale": "Market Scout scanned 7 names.\nFocus ticker: NVDA (NVIDIA Corporation) @ $128.4\nDay change: 3.1% | Sector: Technology\nOpportunity rank: #3 | score=48.8\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)",
+      "monitor": {
+        "screen_title": "UNIVERSE SCAN",
+        "chart": {
+          "kind": "bars",
+          "points": [
+            42.3,
+            45.6,
+            49.9,
+            47.7,
+            54.0,
+            61.3,
+            53.1,
+            53.4,
+            54.7,
+            49.5
+          ],
+          "bars": [
+            {
+              "t": "GOOGL",
+              "v": 58
+            },
+            {
+              "t": "AMZN",
+              "v": 50
+            },
+            {
+              "t": "NVDA",
+              "v": 49
+            },
+            {
+              "t": "TSLA",
+              "v": 47
+            },
+            {
+              "t": "META",
+              "v": 47
+            }
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Focus",
+            "v": "$128.4 \u00b7 3.1%"
+          },
+          {
+            "k": "Opp score",
+            "v": "48.8"
+          },
+          {
+            "k": "Universe",
+            "v": "7 names"
+          }
+        ],
+        "gauge": null,
+        "pills": [
+          {
+            "label": "scouted",
+            "tone": "neutral"
+          },
+          {
+            "label": "SCOUTED",
+            "tone": "neutral"
+          }
+        ],
+        "rationale_short": "Focus ticker: NVDA (NVIDIA Corporation) @ $128.4"
+      }
     },
     {
       "id": "technical",
@@ -55,7 +121,131 @@
         "detail": "bullish \u00b7 uptrend",
         "tone": "bull"
       },
-      "rationale": "Technical Analysis \u2014 NVDA\n  Price: $128.4\n  RSI(14): 53.86 \u2192 bullish\n  MACD: 0.9799 | signal=0.8674 | hist=0.1124\n  SMA20: 127.24 | SMA50: 126.64 | EMA12: 128.5\n  Trend: uptrend | Bias: bullish\n  Signal balance: 3 bullish / 0 bearish\n  Technical score: 79/100"
+      "rationale": "Technical Analysis \u2014 NVDA\n  Price: $128.4\n  RSI(14): 53.86 \u2192 bullish\n  MACD: 0.9799 | signal=0.8674 | hist=0.1124\n  SMA20: 127.24 | SMA50: 126.64 | EMA12: 128.5\n  Trend: uptrend | Bias: bullish\n  Signal balance: 3 bullish / 0 bearish\n  Technical score: 79/100",
+      "monitor": {
+        "screen_title": "CHART DESK",
+        "chart": {
+          "kind": "candles",
+          "candles": [
+            {
+              "o": 116,
+              "h": 117,
+              "l": 114,
+              "c": 115
+            },
+            {
+              "o": 115,
+              "h": 119,
+              "l": 113,
+              "c": 117
+            },
+            {
+              "o": 117,
+              "h": 125,
+              "l": 116,
+              "c": 122
+            },
+            {
+              "o": 122,
+              "h": 123,
+              "l": 117,
+              "c": 119
+            },
+            {
+              "o": 119,
+              "h": 121,
+              "l": 118,
+              "c": 119
+            },
+            {
+              "o": 119,
+              "h": 125,
+              "l": 117,
+              "c": 122
+            },
+            {
+              "o": 122,
+              "h": 123,
+              "l": 116,
+              "c": 117
+            },
+            {
+              "o": 117,
+              "h": 119,
+              "l": 113,
+              "c": 115
+            },
+            {
+              "o": 115,
+              "h": 119,
+              "l": 114,
+              "c": 116
+            },
+            {
+              "o": 116,
+              "h": 121,
+              "l": 114,
+              "c": 120
+            },
+            {
+              "o": 120,
+              "h": 122,
+              "l": 115,
+              "c": 116
+            },
+            {
+              "o": 116,
+              "h": 119,
+              "l": 113,
+              "c": 115
+            }
+          ],
+          "points": [
+            46.53,
+            47.4,
+            51.27,
+            44.13,
+            45.0,
+            48.87,
+            41.73,
+            42.6,
+            46.47,
+            39.33,
+            40.2,
+            44.07,
+            36.93,
+            37.8,
+            41.67,
+            34.53
+          ]
+        },
+        "metrics": [
+          {
+            "k": "RSI",
+            "v": "79"
+          },
+          {
+            "k": "Trend",
+            "v": "uptrend"
+          },
+          {
+            "k": "Bias",
+            "v": "BULL"
+          }
+        ],
+        "gauge": {
+          "value": 79,
+          "max": 100,
+          "label": "Tech score"
+        },
+        "pills": [
+          {
+            "label": "BUY",
+            "tone": "bull"
+          }
+        ],
+        "rationale_short": "Price: $128.4"
+      }
     },
     {
       "id": "fundamental",
@@ -69,7 +259,53 @@
         "detail": "undervalued / attractive",
         "tone": "bull"
       },
-      "rationale": "Fundamental Analysis \u2014 NVDA (NVIDIA Corporation)\n  Sector/Industry: Technology / Semiconductors\n  Price: $128.4 | Market Cap: $3150.0B\n  P/E: 58.00 | Forward P/E: 32.00\n  P/B: 48.00 | P/S: 32.00\n  EPS: 2.21 | ROE: 115.0%\n  Revenue growth: 95.0% | Profit margin: 55.0%\n  Debt/Equity: 0.25 | Beta: 1.70"
+      "rationale": "Fundamental Analysis \u2014 NVDA (NVIDIA Corporation)\n  Sector/Industry: Technology / Semiconductors\n  Price: $128.4 | Market Cap: $3150.0B\n  P/E: 58.00 | Forward P/E: 32.00\n  P/B: 48.00 | P/S: 32.00\n  EPS: 2.21 | ROE: 115.0%\n  Revenue growth: 95.0% | Profit margin: 55.0%\n  Debt/Equity: 0.25 | Beta: 1.70",
+      "monitor": {
+        "screen_title": "VALUATION",
+        "chart": {
+          "kind": "gauge",
+          "points": [
+            51.17,
+            55.0,
+            55.83,
+            49.67,
+            53.5,
+            54.33,
+            48.17,
+            52.0,
+            52.83,
+            46.67,
+            50.5,
+            51.33
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Score",
+            "v": "83"
+          },
+          {
+            "k": "Valuation",
+            "v": "undervalued / attracti"
+          },
+          {
+            "k": "Quality",
+            "v": "High"
+          }
+        ],
+        "gauge": {
+          "value": 83,
+          "max": 100,
+          "label": "Fund score"
+        },
+        "pills": [
+          {
+            "label": "BUY",
+            "tone": "bull"
+          }
+        ],
+        "rationale_short": "Sector/Industry: Technology / Semiconductors"
+      }
     },
     {
       "id": "news",
@@ -83,7 +319,61 @@
         "detail": "2 headlines",
         "tone": "neutral"
       },
-      "rationale": "News & Catalyst Analysis \u2014 NVDA\n  Aggregate sentiment: neutral (score=0.0)\n  Breakdown: +1 / -1 / ~0\n  Headlines:\n    [POSITIVE] Data-center GPU demand remains robust \u2014 DemoWire\n      Hyperscalers continue multi-year AI infrastructure spend.\n    [NEGATIVE] Export control headlines weigh on sentiment \u2014 DemoMarkets\n      Policy risk remains a watch item for China exposure."
+      "rationale": "News & Catalyst Analysis \u2014 NVDA\n  Aggregate sentiment: neutral (score=0.0)\n  Breakdown: +1 / -1 / ~0\n  Headlines:\n    [POSITIVE] Data-center GPU demand remains robust \u2014 DemoWire\n      Hyperscalers continue multi-year AI infrastructure spend.\n    [NEGATIVE] Export control headlines weigh on sentiment \u2014 DemoMarkets\n      Policy risk remains a watch item for China exposure.",
+      "monitor": {
+        "screen_title": "NEWS FEED",
+        "chart": {
+          "kind": "sparkline",
+          "points": [
+            47.07,
+            52.8,
+            53.53,
+            51.27,
+            51.0,
+            54.73,
+            46.47,
+            49.2,
+            55.93,
+            50.67,
+            56.4,
+            57.13,
+            54.87,
+            54.6
+          ],
+          "feed": [
+            {
+              "t": "NVDA catalyst watch",
+              "when": "2h ago"
+            },
+            {
+              "t": "Sector flow update",
+              "when": "5h ago"
+            }
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Sentiment",
+            "v": "NEUTRAL"
+          },
+          {
+            "k": "Headlines",
+            "v": "2"
+          },
+          {
+            "k": "Catalysts",
+            "v": "\u2014"
+          }
+        ],
+        "gauge": null,
+        "pills": [
+          {
+            "label": "NEUTRAL",
+            "tone": "neutral"
+          }
+        ],
+        "rationale_short": "Aggregate sentiment: neutral (score=0.0)"
+      }
     },
     {
       "id": "quant",
@@ -97,7 +387,85 @@
         "detail": "Win 80.1%",
         "tone": "bull"
       },
-      "rationale": "Quant Analysis \u2014 NVDA\n  Edge score: 66.7/100\n  Win probability: 80.1%\n  Expected return (scenario-weighted): 4.9%\n  Factor contributions:\n    Technical momentum: 79.0\n    Fundamental quality: 83.0\n    News sentiment: 50.0"
+      "rationale": "Quant Analysis \u2014 NVDA\n  Edge score: 66.7/100\n  Win probability: 80.1%\n  Expected return (scenario-weighted): 4.9%\n  Factor contributions:\n    Technical momentum: 79.0\n    Fundamental quality: 83.0\n    News sentiment: 50.0",
+      "monitor": {
+        "screen_title": "EDGE MODEL",
+        "chart": {
+          "kind": "donut",
+          "points": [
+            68.0,
+            72.3,
+            71.6,
+            71.9,
+            70.2,
+            72.5,
+            66.8,
+            68.1,
+            73.4,
+            70.7,
+            75.0,
+            74.3,
+            74.6,
+            72.9
+          ],
+          "donut": {
+            "value": 60.0,
+            "label": "Win %"
+          },
+          "bars": [
+            {
+              "t": "Moment",
+              "v": 60
+            },
+            {
+              "t": "Qualit",
+              "v": 55
+            },
+            {
+              "t": "Growth",
+              "v": 70
+            },
+            {
+              "t": "Value",
+              "v": 40
+            },
+            {
+              "t": "Vol",
+              "v": 35
+            }
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Edge",
+            "v": "66.7"
+          },
+          {
+            "k": "Win prob",
+            "v": "60%"
+          },
+          {
+            "k": "Expected",
+            "v": "\u2014"
+          }
+        ],
+        "gauge": {
+          "value": 66,
+          "max": 100,
+          "label": "Edge"
+        },
+        "pills": [
+          {
+            "label": "EDGE 66.7",
+            "tone": "bull"
+          },
+          {
+            "label": "EDGE 67",
+            "tone": "bull"
+          }
+        ],
+        "rationale_short": "Edge score: 66.7/100"
+      }
     },
     {
       "id": "risk",
@@ -111,7 +479,60 @@
         "detail": "10.0% size",
         "tone": "bull"
       },
-      "rationale": "Risk Management \u2014 NVDA\n  Decision: APPROVE\n  Portfolio value: $100,000\n  Proposed size: 10.00% ($10,000.00 / 77 shares @ $128.4)\n  Max position cap: 10.0%\n  Est. max loss (bear): $540.00\n  Beta: 1.7\n  Stress tests:"
+      "rationale": "Risk Management \u2014 NVDA\n  Decision: APPROVE\n  Portfolio value: $100,000\n  Proposed size: 10.00% ($10,000.00 / 77 shares @ $128.4)\n  Max position cap: 10.0%\n  Est. max loss (bear): $540.00\n  Beta: 1.7\n  Stress tests:",
+      "monitor": {
+        "screen_title": "STRESS DESK",
+        "chart": {
+          "kind": "drawdown",
+          "points": [
+            15.4,
+            13.8,
+            12.2,
+            1.6,
+            -0.0,
+            -1.6,
+            -12.2,
+            -13.8,
+            -15.4,
+            -26.0,
+            -27.6,
+            -29.2,
+            -39.8,
+            -41.4
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Decision",
+            "v": "APPROVE"
+          },
+          {
+            "k": "Max DD",
+            "v": "-18%"
+          },
+          {
+            "k": "Size",
+            "v": "10.0% size"
+          }
+        ],
+        "gauge": {
+          "value": 62,
+          "max": 100,
+          "label": "Risk OK",
+          "invert": true
+        },
+        "pills": [
+          {
+            "label": "APPROVE",
+            "tone": "bull"
+          },
+          {
+            "label": "APPROVE",
+            "tone": "bull"
+          }
+        ],
+        "rationale_short": "Decision: APPROVE"
+      }
     },
     {
       "id": "portfolio",
@@ -125,7 +546,53 @@
         "detail": "10.00% alloc",
         "tone": "bull"
       },
-      "rationale": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 NVDA (NVIDIA Corporation)\n Generated: 2026-09-13 07:35 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: BUY\nPrice: $128.4 | Edge: 66.7/100 | Win Prob: 80.1%\nExpected return: 4.9%"
+      "rationale": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 NVDA (NVIDIA Corporation)\n Generated: 2026-09-13 07:35 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: BUY\nPrice: $128.4 | Edge: 66.7/100 | Win Prob: 80.1%\nExpected return: 4.9%",
+      "monitor": {
+        "screen_title": "FINAL MEMO",
+        "chart": {
+          "kind": "allocation",
+          "points": [
+            50.77,
+            48.2,
+            45.63,
+            39.07,
+            36.5,
+            33.93,
+            27.37,
+            24.8,
+            22.23,
+            15.67,
+            13.1,
+            10.53
+          ]
+        },
+        "metrics": [
+          {
+            "k": "Action",
+            "v": "BUY"
+          },
+          {
+            "k": "Alloc",
+            "v": "10.00% alloc"
+          },
+          {
+            "k": "Memo",
+            "v": "READY"
+          }
+        ],
+        "gauge": {
+          "value": 100,
+          "max": 100,
+          "label": "Conviction"
+        },
+        "pills": [
+          {
+            "label": "BUY",
+            "tone": "bull"
+          }
+        ],
+        "rationale_short": "INVESTMENT MEMO \u2014 NVDA (NVIDIA Corporation)"
+      }
     }
   ],
   "memo": {
@@ -225,5 +692,41 @@
   "scan_ranking": [],
   "example_id": "nvda",
   "example_title": "Example B \u2014 NVDA abbreviated agent gallery",
-  "example_blurb": "Same 7-agent floor on NVIDIA: bullish technicals + fundamentals, Risk APPROVE, Portfolio BUY memo."
+  "example_blurb": "Same 7-agent floor on NVIDIA: bullish technicals + fundamentals, Risk APPROVE, Portfolio BUY memo.",
+  "hero": {
+    "ticker": "NVDA",
+    "name": "NVIDIA Corporation",
+    "price": 128.4,
+    "change_pct": 3.1,
+    "recommendation": "BUY",
+    "edge_score": 66.7,
+    "win_probability": 80.1,
+    "allocation_pct": 0.1,
+    "trade_rejected": false
+  },
+  "combined_banner": {
+    "title": "COMBINED RESULT",
+    "subtitle": "Final memo from Portfolio Manager",
+    "recommendation": "BUY",
+    "headline": "NVDA \u00b7 BUY",
+    "stats": [
+      {
+        "k": "Edge",
+        "v": "66.7"
+      },
+      {
+        "k": "Win",
+        "v": "80.1%"
+      },
+      {
+        "k": "Alloc",
+        "v": "10.0%"
+      },
+      {
+        "k": "Expected",
+        "v": "4.9%"
+      }
+    ],
+    "tone": "bull"
+  }
 }

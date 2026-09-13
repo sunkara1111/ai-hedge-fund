@@ -57,26 +57,41 @@ function renderSkeleton(status = "pending") {
 function agentCardHtml(meta, agent) {
   const status = agent.status || "pending";
   const verdict = agent.verdict || {};
-  const score =
-    verdict.score !== null && verdict.score !== undefined
-      ? ` · score ${verdict.score}`
-      : "";
+  const mon = synthesizeMonitor(meta, agent);
+  const tone = verdict.tone || "neutral";
   return `
-    <article class="agent-card" data-id="${meta.id}" data-status="${status}">
+    <article class="agent-card monitor-card" data-id="${meta.id}" data-status="${status}" data-tone="${tone}">
       <button type="button" class="agent-head" aria-expanded="false">
-        <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div class="floor-id">
           <span class="agent-num">${meta.num}</span>
           <span class="agent-icon" aria-hidden="true">${meta.icon}</span>
-          <div class="agent-meta">
-            <strong>${meta.name}</strong>
-            <span>${verdict.detail || ""}${score}</span>
-          </div>
+        </div>
+        <div class="agent-meta">
+          <strong>${meta.name}</strong>
+          <span class="screen-title">${escapeHtml(mon.screen_title || "")}</span>
         </div>
         <div class="agent-side">
           <span class="status-chip ${status}">${status}</span>
-          <span class="verdict-chip ${verdict.tone || "neutral"}">${verdict.label || "—"}</span>
+          <span class="verdict-chip ${tone}">${escapeHtml(verdict.label || "—")}</span>
         </div>
       </button>
+      <div class="monitor-screen">
+        <div class="monitor-top">
+          <span class="monitor-dot"></span>
+          <span class="monitor-dot"></span>
+          <span class="monitor-dot"></span>
+          <em>${escapeHtml(mon.screen_title || "MONITOR")}</em>
+        </div>
+        <div class="monitor-body">
+          <div class="monitor-chart">${chartHtml(mon.chart, tone)}</div>
+          <div class="monitor-side">
+            ${gaugeSvg(mon.gauge)}
+            <div class="metric-rows">${metricsHtml(mon.metrics)}</div>
+          </div>
+        </div>
+        <div class="monitor-pills">${pillsHtml(mon.pills)}</div>
+        <p class="monitor-rationale">${escapeHtml(mon.rationale_short || "")}</p>
+      </div>
       <div class="agent-body">
         <pre class="rationale">${escapeHtml(agent.rationale || "No rationale yet.")}</pre>
       </div>
@@ -99,6 +114,170 @@ function escapeHtml(s) {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
+}
+
+
+
+function sparklineSvg(points, opts = {}) {
+  const pts = (points || []).map(Number).filter((n) => !Number.isNaN(n));
+  if (pts.length < 2) return "";
+  const w = opts.w || 160;
+  const h = opts.h || 48;
+  const min = Math.min(...pts);
+  const max = Math.max(...pts);
+  const span = max - min || 1;
+  const step = w / (pts.length - 1);
+  const coords = pts
+    .map((p, i) => {
+      const x = i * step;
+      const y = h - ((p - min) / span) * (h - 6) - 3;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    })
+    .join(" ");
+  const last = pts[pts.length - 1];
+  const first = pts[0];
+  const up = last >= first;
+  const stroke = opts.stroke || (up ? "#3dcf7a" : "#ff5a5a");
+  const fill = opts.fill || (up ? "rgba(61,207,122,0.18)" : "rgba(255,90,90,0.15)");
+  const area = `0,${h} ${coords} ${w},${h}`;
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" aria-hidden="true"><polygon points="${area}" fill="${fill}"/><polyline points="${coords}" fill="none" stroke="${stroke}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+
+function candlesSvg(candles, opts = {}) {
+  const rows = candles || [];
+  if (!rows.length) return "";
+  const w = opts.w || 160;
+  const h = opts.h || 52;
+  const pad = 4;
+  const all = rows.flatMap((c) => [c.h, c.l]);
+  const min = Math.min(...all);
+  const max = Math.max(...all);
+  const span = max - min || 1;
+  const slot = (w - pad * 2) / rows.length;
+  const y = (v) => h - pad - ((v - min) / span) * (h - pad * 2);
+  const bars = rows
+    .map((c, i) => {
+      const x = pad + i * slot + slot / 2;
+      const up = c.c >= c.o;
+      const color = up ? "#3dcf7a" : "#ff5a5a";
+      const y1 = y(c.h);
+      const y2 = y(c.l);
+      const yo = y(c.o);
+      const yc = y(c.c);
+      const top = Math.min(yo, yc);
+      const bh = Math.max(2, Math.abs(yc - yo));
+      const bw = Math.max(2, slot * 0.45);
+      return `<line x1="${x}" y1="${y1}" x2="${x}" y2="${y2}" stroke="${color}" stroke-width="1"/><rect x="${x - bw / 2}" y="${top}" width="${bw}" height="${bh}" fill="${color}"/>`;
+    })
+    .join("");
+  return `<svg class="spark candles" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" aria-hidden="true">${bars}</svg>`;
+}
+
+function barsSvg(bars, opts = {}) {
+  const rows = bars || [];
+  if (!rows.length) return "";
+  const w = opts.w || 160;
+  const h = opts.h || 52;
+  const max = Math.max(...rows.map((b) => Number(b.v) || 0), 1);
+  const slot = w / rows.length;
+  const rects = rows
+    .map((b, i) => {
+      const v = Number(b.v) || 0;
+      const bh = Math.max(4, (v / max) * (h - 14));
+      const x = i * slot + slot * 0.18;
+      const bw = slot * 0.64;
+      const tone = v >= 55 ? "#3dcf7a" : v >= 45 ? "#ff9a3c" : "#ff5a5a";
+      return `<rect x="${x}" y="${h - bh - 2}" width="${bw}" height="${bh}" rx="2" fill="${tone}"/><text x="${x + bw / 2}" y="${h}" text-anchor="middle" fill="#9a8f82" font-size="7">${escapeHtml(b.t || "")}</text>`;
+    })
+    .join("");
+  return `<svg class="spark bars" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" aria-hidden="true">${rects}</svg>`;
+}
+
+function donutSvg(value, opts = {}) {
+  const v = Math.max(0, Math.min(100, Number(value) || 0));
+  const size = opts.size || 56;
+  const r = 20;
+  const c = 2 * Math.PI * r;
+  const dash = (v / 100) * c;
+  const color = v >= 65 ? "#3dcf7a" : v >= 50 ? "#ff9a3c" : "#ff5a5a";
+  return `<svg class="donut" viewBox="0 0 56 56" width="${size}" height="${size}" aria-hidden="true"><circle cx="28" cy="28" r="${r}" fill="none" stroke="#3a3028" stroke-width="6"/><circle cx="28" cy="28" r="${r}" fill="none" stroke="${color}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${dash} ${c - dash}" transform="rotate(-90 28 28)"/><text x="28" y="31" text-anchor="middle" fill="#fff8f0" font-size="11" font-weight="700">${Math.round(v)}%</text></svg>`;
+}
+
+function gaugeSvg(gauge) {
+  if (!gauge) return "";
+  const max = gauge.max || 100;
+  const v = Math.max(0, Math.min(max, Number(gauge.value) || 0));
+  const pct = (v / max) * 100;
+  const invert = gauge.invert;
+  const color = invert
+    ? pct >= 60
+      ? "#ff5a5a"
+      : pct >= 40
+        ? "#ff9a3c"
+        : "#3dcf7a"
+    : pct >= 65
+      ? "#3dcf7a"
+      : pct >= 45
+        ? "#ff9a3c"
+        : "#ff5a5a";
+  return `<div class="gauge" title="${escapeHtml(gauge.label || "")}"><div class="gauge-ring" style="--pct:${pct};--gcolor:${color}"><strong>${Math.round(v)}</strong></div><span>${escapeHtml(gauge.label || "")}</span></div>`;
+}
+
+function chartHtml(chart, tone) {
+  if (!chart) return sparklineSvg([40, 42, 41, 45, 48, 47, 52, 50]);
+  const kind = chart.kind || "sparkline";
+  if (kind === "candles" && chart.candles) return candlesSvg(chart.candles);
+  if ((kind === "bars" || kind === "donut") && chart.bars && chart.bars.length) {
+    const left = barsSvg(chart.bars);
+    const right = chart.donut ? donutSvg(chart.donut.value) : "";
+    return `<div class="chart-combo">${left}${right}</div>`;
+  }
+  if (kind === "donut" && chart.donut) {
+    return `<div class="chart-combo">${sparklineSvg(chart.points)}${donutSvg(chart.donut.value)}</div>`;
+  }
+  if (kind === "drawdown") return sparklineSvg(chart.points, { stroke: "#ff5a5a", fill: "rgba(255,90,90,0.16)" });
+  if (chart.feed && chart.feed.length) {
+    const feed = chart.feed
+      .slice(0, 2)
+      .map((f) => `<div class="feed-row"><span>${escapeHtml(f.t)}</span><em>${escapeHtml(f.when)}</em></div>`)
+      .join("");
+    return `<div class="feed-panel">${feed}${sparklineSvg(chart.points, { w: 140, h: 28 })}</div>`;
+  }
+  const stroke = tone === "bear" ? "#ff5a5a" : tone === "bull" ? "#3dcf7a" : "#ff9a3c";
+  return sparklineSvg(chart.points, { stroke });
+}
+
+function metricsHtml(metrics) {
+  return (metrics || [])
+    .map((m) => `<div class="metric"><span>${escapeHtml(m.k)}</span><strong>${escapeHtml(m.v)}</strong></div>`)
+    .join("");
+}
+
+function pillsHtml(pills) {
+  return (pills || [])
+    .map((p) => `<span class="bias-pill ${p.tone || "neutral"}">${escapeHtml(p.label)}</span>`)
+    .join("");
+}
+
+function synthesizeMonitor(meta, agent) {
+  if (agent.monitor) return agent.monitor;
+  const verdict = agent.verdict || {};
+  const score = verdict.score;
+  const tone = verdict.tone || "neutral";
+  const seed = (meta.num || "01").charCodeAt(1) + (score || 40);
+  const points = Array.from({ length: 12 }, (_, i) => 40 + ((seed * (i + 3)) % 17) - 6 + i * 0.4);
+  return {
+    screen_title: (meta.name || "AGENT").toUpperCase(),
+    chart: { kind: "sparkline", points },
+    metrics: [
+      { k: "Status", v: agent.status || "—" },
+      { k: "Detail", v: String(verdict.detail || "—").slice(0, 18) },
+      { k: "Score", v: score != null ? String(score) : "—" },
+    ],
+    gauge: score != null ? { value: Number(score), max: 100, label: "Score" } : null,
+    pills: [{ label: verdict.label || "—", tone }],
+    rationale_short: String(agent.rationale || "Agent output.").split("\n")[0].slice(0, 110),
+  };
 }
 
 function setBusy(busy, label = "Running pipeline…") {
