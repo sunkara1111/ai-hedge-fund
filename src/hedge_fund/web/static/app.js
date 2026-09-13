@@ -490,3 +490,15 @@ function showToast(msg) {
   document.body.appendChild(t);
   setTimeout(() => t.remove(), 2200);
 }
+
+/* Honor ?q= from WebSite SearchAction — scroll to examples (static showcase). */
+(function honorSearchQuery() {
+  try {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (!q) return;
+    const target = document.getElementById("examples") || document.getElementById("faq");
+    if (target) {
+      requestAnimationFrame(() => target.scrollIntoView({ behavior: "smooth", block: "start" }));
+    }
+  } catch (_) { /* ignore */ }
+})();

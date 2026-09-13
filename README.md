@@ -138,7 +138,7 @@ curl -s -X POST http://localhost:8000/api/analyze \
 
 ## Public website
 
-The GitHub Pages site at [https://sunkara1111.github.io/ai-hedge-fund/](https://sunkara1111.github.io/ai-hedge-fund/) is a **static showcase** published from the `docs/` folder on `main`. It uses bundled demo sample data and does not host the live FastAPI backend. Run the dashboard locally to call the pipeline.
+The public site is **GitHub Pages only** (no Netlify): [https://sunkara1111.github.io/ai-hedge-fund/](https://sunkara1111.github.io/ai-hedge-fund/) — a **static showcase** published from the `docs/` folder on `main`. It uses bundled demo sample data and does not host the live FastAPI backend. Run the dashboard locally to call the pipeline.
 
 Share text:
 
