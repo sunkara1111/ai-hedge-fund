@@ -1,0 +1,895 @@
+{
+  "ok": true,
+  "mode": "analyze",
+  "ticker": "TSLA",
+  "demo": true,
+  "portfolio_value": 100000,
+  "quote": {
+    "symbol": "TSLA",
+    "name": "Tesla, Inc.",
+    "price": 248.5,
+    "change_pct": 2.35,
+    "volume": 95000000,
+    "avg_volume": 80000000,
+    "market_cap": 790000000000,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "pe_ratio": 62.5,
+    "forward_pe": 48.0,
+    "pb_ratio": 12.1,
+    "ps_ratio": 8.4,
+    "eps": 3.98,
+    "revenue_growth": 0.18,
+    "profit_margin": 0.095,
+    "debt_to_equity": 0.18,
+    "roe": 0.22,
+    "beta": 2.05,
+    "52w_high": 299.29,
+    "52w_low": 138.8,
+    "dividend_yield": 0.0
+  },
+  "agents": [
+    {
+      "id": "market_scout",
+      "num": "01",
+      "name": "Market Scout",
+      "section": "1. Market Scout",
+      "icon": "\ud83d\udd2d",
+      "status": "done",
+      "verdict": {
+        "label": "scouted",
+        "score": 46.75,
+        "detail": "$248.5 \u00b7 2.35%",
+        "tone": "neutral"
+      },
+      "rationale": "Market Scout scanned 7 names.\nFocus ticker: TSLA (Tesla, Inc.) @ $248.5\nDay change: 2.35% | Sector: Consumer Cyclical\nOpportunity rank: #4 | score=46.75\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)\n  #4 TSLA: score=46.75 (2.35% / mom5d=-0.72%)\n  #5 META: score=46.72 (1.55% / mom5d=-9.14%)",
+      "data": {
+        "focus_ticker": "TSLA",
+        "quote": {
+          "symbol": "TSLA",
+          "name": "Tesla, Inc.",
+          "price": 248.5,
+          "change_pct": 2.35,
+          "volume": 95000000,
+          "avg_volume": 80000000,
+          "market_cap": 790000000000,
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Manufacturers",
+          "pe_ratio": 62.5,
+          "forward_pe": 48.0,
+          "pb_ratio": 12.1,
+          "ps_ratio": 8.4,
+          "eps": 3.98,
+          "revenue_growth": 0.18,
+          "profit_margin": 0.095,
+          "debt_to_equity": 0.18,
+          "roe": 0.22,
+          "beta": 2.05,
+          "52w_high": 299.29,
+          "52w_low": 138.8,
+          "dividend_yield": 0.0
+        },
+        "opportunities": [
+          {
+            "ticker": "GOOGL",
+            "name": "Alphabet Inc.",
+            "price": 165.4,
+            "change_pct": 0.7,
+            "momentum_5d": -1.22,
+            "volume_ratio": 0.88,
+            "opportunity_score": 57.87,
+            "sector": "Communication Services",
+            "rank": 1
+          },
+          {
+            "ticker": "AMZN",
+            "name": "Amazon.com, Inc.",
+            "price": 185.6,
+            "change_pct": 1.2,
+            "momentum_5d": -2.09,
+            "volume_ratio": 0.89,
+            "opportunity_score": 49.66,
+            "sector": "Consumer Cyclical",
+            "rank": 2
+          },
+          {
+            "ticker": "NVDA",
+            "name": "NVIDIA Corporation",
+            "price": 128.4,
+            "change_pct": 3.1,
+            "momentum_5d": -1.4,
+            "volume_ratio": 1.12,
+            "opportunity_score": 48.8,
+            "sector": "Technology",
+            "rank": 3
+          },
+          {
+            "ticker": "TSLA",
+            "name": "Tesla, Inc.",
+            "price": 248.5,
+            "change_pct": 2.35,
+            "momentum_5d": -0.72,
+            "volume_ratio": 1.19,
+            "opportunity_score": 46.75,
+            "sector": "Consumer Cyclical",
+            "rank": 4
+          },
+          {
+            "ticker": "META",
+            "name": "Meta Platforms, Inc.",
+            "price": 560.1,
+            "change_pct": 1.55,
+            "momentum_5d": -9.14,
+            "volume_ratio": 0.86,
+            "opportunity_score": 46.72,
+            "sector": "Communication Services",
+            "rank": 5
+          },
+          {
+            "ticker": "MSFT",
+            "name": "Microsoft Corporation",
+            "price": 430.2,
+            "change_pct": 0.45,
+            "momentum_5d": -5.58,
+            "volume_ratio": 0.9,
+            "opportunity_score": 45.78,
+            "sector": "Technology",
+            "rank": 6
+          },
+          {
+            "ticker": "AAPL",
+            "name": "Apple Inc.",
+            "price": 227.8,
+            "change_pct": 0.85,
+            "momentum_5d": -5.44,
+            "volume_ratio": 0.95,
+            "opportunity_score": 38.39,
+            "sector": "Technology",
+            "rank": 7
+          }
+        ],
+        "thesis": "TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.",
+        "summary": "Market Scout scanned 7 names.\nFocus ticker: TSLA (Tesla, Inc.) @ $248.5\nDay change: 2.35% | Sector: Consumer Cyclical\nOpportunity rank: #4 | score=46.75\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)\n  #4 TSLA: score=46.75 (2.35% / mom5d=-0.72%)\n  #5 META: score=46.72 (1.55% / mom5d=-9.14%)"
+      }
+    },
+    {
+      "id": "technical",
+      "num": "02",
+      "name": "Technical",
+      "section": "2. Technical Analyst",
+      "icon": "\ud83d\udcc8",
+      "status": "done",
+      "verdict": {
+        "label": "HOLD",
+        "score": 47,
+        "detail": "neutral \u00b7 sideways",
+        "tone": "neutral"
+      },
+      "rationale": "Technical Analysis \u2014 TSLA\n  Price: $248.5\n  RSI(14): 49.46 \u2192 neutral\n  MACD: 0.6852 | signal=1.1783 | hist=-0.4931\n  SMA20: 249.33 | SMA50: 242.67 | EMA12: 247.85\n  Trend: sideways | Bias: neutral\n  Signal balance: 1 bullish / 2 bearish\n  Technical score: 47/100",
+      "data": {
+        "rsi": 49.46,
+        "macd": {
+          "macd": 0.6852,
+          "signal": 1.1783,
+          "histogram": -0.4931
+        },
+        "sma_20": 249.33,
+        "sma_50": 242.67,
+        "ema_12": 247.85,
+        "price": 248.5,
+        "trend": "sideways",
+        "bias": "neutral",
+        "score": 47,
+        "bullish_signals": 1,
+        "bearish_signals": 2,
+        "ticker": "TSLA",
+        "recommendation": "hold",
+        "summary": "Technical Analysis \u2014 TSLA\n  Price: $248.5\n  RSI(14): 49.46 \u2192 neutral\n  MACD: 0.6852 | signal=1.1783 | hist=-0.4931\n  SMA20: 249.33 | SMA50: 242.67 | EMA12: 247.85\n  Trend: sideways | Bias: neutral\n  Signal balance: 1 bullish / 2 bearish\n  Technical score: 47/100"
+      }
+    },
+    {
+      "id": "fundamental",
+      "num": "03",
+      "name": "Fundamental",
+      "section": "3. Fundamental Analyst",
+      "icon": "\ud83d\udcca",
+      "status": "done",
+      "verdict": {
+        "label": "BUY",
+        "score": 73,
+        "detail": "undervalued / attractive",
+        "tone": "bull"
+      },
+      "rationale": "Fundamental Analysis \u2014 TSLA (Tesla, Inc.)\n  Sector/Industry: Consumer Cyclical / Auto Manufacturers\n  Price: $248.5 | Market Cap: $790.0B\n  P/E: 62.50 | Forward P/E: 48.00\n  P/B: 12.10 | P/S: 8.40\n  EPS: 3.98 | ROE: 22.0%\n  Revenue growth: 18.0% | Profit margin: 9.5%\n  Debt/Equity: 0.18 | Beta: 2.05\n  52w range: 138.8 \u2013 299.29\n  Valuation verdict: undervalued / attractive (score 73/100)",
+      "data": {
+        "ticker": "TSLA",
+        "quote": {
+          "symbol": "TSLA",
+          "name": "Tesla, Inc.",
+          "price": 248.5,
+          "change_pct": 2.35,
+          "volume": 95000000,
+          "avg_volume": 80000000,
+          "market_cap": 790000000000,
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Manufacturers",
+          "pe_ratio": 62.5,
+          "forward_pe": 48.0,
+          "pb_ratio": 12.1,
+          "ps_ratio": 8.4,
+          "eps": 3.98,
+          "revenue_growth": 0.18,
+          "profit_margin": 0.095,
+          "debt_to_equity": 0.18,
+          "roe": 0.22,
+          "beta": 2.05,
+          "52w_high": 299.29,
+          "52w_low": 138.8,
+          "dividend_yield": 0.0
+        },
+        "valuation": "undervalued / attractive",
+        "score": 73,
+        "recommendation": "buy",
+        "summary": "Fundamental Analysis \u2014 TSLA (Tesla, Inc.)\n  Sector/Industry: Consumer Cyclical / Auto Manufacturers\n  Price: $248.5 | Market Cap: $790.0B\n  P/E: 62.50 | Forward P/E: 48.00\n  P/B: 12.10 | P/S: 8.40\n  EPS: 3.98 | ROE: 22.0%\n  Revenue growth: 18.0% | Profit margin: 9.5%\n  Debt/Equity: 0.18 | Beta: 2.05\n  52w range: 138.8 \u2013 299.29\n  Valuation verdict: undervalued / attractive (score 73/100)"
+      }
+    },
+    {
+      "id": "news",
+      "num": "04",
+      "name": "News",
+      "section": "4. News Analyst",
+      "icon": "\ud83d\udcf0",
+      "status": "done",
+      "verdict": {
+        "label": "BULLISH",
+        "score": 63,
+        "detail": "3 headlines",
+        "tone": "bull"
+      },
+      "rationale": "News & Catalyst Analysis \u2014 TSLA\n  Aggregate sentiment: bullish (score=0.333)\n  Breakdown: +2 / -1 / ~0\n  Headlines:\n    [POSITIVE] Tesla expands energy storage deployments in Europe \u2014 DemoWire\n      Megapack orders accelerate as utilities seek grid flexibility.\n    [NEGATIVE] EV price competition intensifies in China \u2014 DemoMarkets\n      Margins under pressure from local EV rivals cutting prices.\n    [POSITIVE] Robotaxi software milestone reported by analysts \u2014 DemoTech\n      Incremental FSD progress keeps long-term optionality alive.\n  Key catalysts:\n    \u2022 Tesla expands energy storage deployments in Europe\n    \u2022 Robotaxi software milestone reported by analysts\n  Headline risks:\n    \u2022 EV price competition intensifies in China",
+      "data": {
+        "ticker": "TSLA",
+        "articles": [
+          {
+            "title": "Tesla expands energy storage deployments in Europe",
+            "sentiment": "positive",
+            "source": "DemoWire",
+            "summary": "Megapack orders accelerate as utilities seek grid flexibility."
+          },
+          {
+            "title": "EV price competition intensifies in China",
+            "sentiment": "negative",
+            "source": "DemoMarkets",
+            "summary": "Margins under pressure from local EV rivals cutting prices."
+          },
+          {
+            "title": "Robotaxi software milestone reported by analysts",
+            "sentiment": "positive",
+            "source": "DemoTech",
+            "summary": "Incremental FSD progress keeps long-term optionality alive."
+          }
+        ],
+        "sentiment": {
+          "label": "bullish",
+          "score": 0.333,
+          "positive": 2,
+          "negative": 1,
+          "neutral": 0
+        },
+        "catalysts": [
+          "Tesla expands energy storage deployments in Europe",
+          "Robotaxi software milestone reported by analysts"
+        ],
+        "risks": [
+          "EV price competition intensifies in China"
+        ],
+        "score": 63,
+        "recommendation": "hold",
+        "summary": "News & Catalyst Analysis \u2014 TSLA\n  Aggregate sentiment: bullish (score=0.333)\n  Breakdown: +2 / -1 / ~0\n  Headlines:\n    [POSITIVE] Tesla expands energy storage deployments in Europe \u2014 DemoWire\n      Megapack orders accelerate as utilities seek grid flexibility.\n    [NEGATIVE] EV price competition intensifies in China \u2014 DemoMarkets\n      Margins under pressure from local EV rivals cutting prices.\n    [POSITIVE] Robotaxi software milestone reported by analysts \u2014 DemoTech\n      Incremental FSD progress keeps long-term optionality alive.\n  Key catalysts:\n    \u2022 Tesla expands energy storage deployments in Europe\n    \u2022 Robotaxi software milestone reported by analysts\n  Headline risks:\n    \u2022 EV price competition intensifies in China"
+      }
+    },
+    {
+      "id": "quant",
+      "num": "05",
+      "name": "Quant",
+      "section": "5. Quant Analyst",
+      "icon": "\ud83e\uddee",
+      "status": "done",
+      "verdict": {
+        "label": "EDGE 56.4",
+        "score": 56.4,
+        "detail": "Win 63.0%",
+        "tone": "neutral"
+      },
+      "rationale": "Quant Analysis \u2014 TSLA\n  Edge score: 56.4/100\n  Win probability: 63.0%\n  Expected return (scenario-weighted): 2.28%\n  Factor contributions:\n    Technical momentum: 47.0\n    Fundamental quality: 73.0\n    News sentiment: 63.0\n    Relative strength: 39.0\n    Beta: 2.05\n  Scenarios:\n    Bull: $280.12 (12.7%) p=25.3%\n    Base: $249.14 (0.3%) p=58.2%\n    Bear: $231.97 (-6.7%) p=16.5%",
+      "data": {
+        "ticker": "TSLA",
+        "edge_score": 56.4,
+        "win_probability": 63.0,
+        "expected_return": 2.28,
+        "factors": {
+          "technical_momentum": 47.0,
+          "fundamental_quality": 73.0,
+          "news_sentiment": 63.0,
+          "relative_strength": 39.0,
+          "volatility_proxy_beta": 2.05
+        },
+        "scenarios": {
+          "bull": {
+            "price": 280.12,
+            "return_pct": 12.7,
+            "prob": 25.3
+          },
+          "base": {
+            "price": 249.14,
+            "return_pct": 0.3,
+            "prob": 58.2
+          },
+          "bear": {
+            "price": 231.97,
+            "return_pct": -6.7,
+            "prob": 16.5
+          }
+        },
+        "weights": {
+          "technical": 0.3,
+          "fundamental": 0.3,
+          "news": 0.2,
+          "momentum": 0.2
+        },
+        "recommendation": "hold",
+        "summary": "Quant Analysis \u2014 TSLA\n  Edge score: 56.4/100\n  Win probability: 63.0%\n  Expected return (scenario-weighted): 2.28%\n  Factor contributions:\n    Technical momentum: 47.0\n    Fundamental quality: 73.0\n    News sentiment: 63.0\n    Relative strength: 39.0\n    Beta: 2.05\n  Scenarios:\n    Bull: $280.12 (12.7%) p=25.3%\n    Base: $249.14 (0.3%) p=58.2%\n    Bear: $231.97 (-6.7%) p=16.5%"
+      }
+    },
+    {
+      "id": "risk",
+      "num": "06",
+      "name": "Risk Manager",
+      "section": "6. Risk Manager",
+      "icon": "\ud83d\udee1\ufe0f",
+      "status": "done",
+      "verdict": {
+        "label": "APPROVE",
+        "score": null,
+        "detail": "5.8% size",
+        "tone": "bull"
+      },
+      "rationale": "Risk Management \u2014 TSLA\n  Decision: APPROVE\n  Portfolio value: $100,000\n  Proposed size: 5.83% ($5,830.00 / 23 shares @ $248.5)\n  Max position cap: 10.0%\n  Est. max loss (bear): $390.61\n  Beta: 2.05\n  Stress tests:\n    Market -20%: position loss \u2248 -41.0%\n    Bear scenario: -6.7% \u2192 $231.97\n    Gap -8%: $800.0 on full-cap size\n  Notes: within risk limits",
+      "data": {
+        "ticker": "TSLA",
+        "decision": "APPROVE",
+        "trade_rejected": false,
+        "rejection_reason": "",
+        "position_pct": 0.0583,
+        "position_dollars": 5830.0,
+        "shares": 23,
+        "max_loss": 390.61,
+        "stress": {
+          "market_crash_-20pct": {
+            "portfolio_impact_pct": -4.1,
+            "position_loss_pct": -41.0
+          },
+          "bear_scenario": {
+            "price": 231.97,
+            "return_pct": -6.7
+          },
+          "gap_down_-8pct": {
+            "dollar_loss_on_full_size": 800.0
+          }
+        },
+        "reasons": [
+          "within risk limits"
+        ],
+        "summary": "Risk Management \u2014 TSLA\n  Decision: APPROVE\n  Portfolio value: $100,000\n  Proposed size: 5.83% ($5,830.00 / 23 shares @ $248.5)\n  Max position cap: 10.0%\n  Est. max loss (bear): $390.61\n  Beta: 2.05\n  Stress tests:\n    Market -20%: position loss \u2248 -41.0%\n    Bear scenario: -6.7% \u2192 $231.97\n    Gap -8%: $800.0 on full-cap size\n  Notes: within risk limits"
+      }
+    },
+    {
+      "id": "portfolio",
+      "num": "07",
+      "name": "Portfolio Manager",
+      "section": "7. Portfolio Manager",
+      "icon": "\ud83d\udccb",
+      "status": "done",
+      "verdict": {
+        "label": "HOLD / WATCH",
+        "score": null,
+        "detail": "5.83% alloc",
+        "tone": "neutral"
+      },
+      "rationale": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 TSLA (Tesla, Inc.)\n Generated: 2026-09-13 06:38 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: HOLD / WATCH\nPrice: $248.5 | Edge: 56.4/100 | Win Prob: 63.0%\nExpected return: 2.28%\n\nALLOCATION\n  Target weight: 5.83%\n  Notional: $5,830.00\n  Shares: 23\n  Risk decision: APPROVE\n\nTHESIS\n  TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: neutral / trend=sideways (score 47)\n  Fundamentals: undervalued / attractive (score 73)\n  News tape: bullish (score 63)\n\nSCENARIOS\n  Bull: $280.12 (12.7%)\n  Base: $249.14 (0.3%)\n  Bear: $231.97 (-6.7%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Tesla expands energy storage deployments in Europe\n  \u2022 Robotaxi software milestone reported by analysts\n\nKEY RISKS\n  \u2022 EV price competition intensifies in China\n\nANALYST CONSENSUS\n  Technical=hold | Fundamental=buy\n  News=hold | Quant=hold\n  Votes \u2192 buy:1 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "data": {
+        "ticker": "TSLA",
+        "action": "HOLD / WATCH",
+        "allocation_pct": 0.0583,
+        "allocation_dollars": 5830.0,
+        "shares": 23,
+        "memo": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 TSLA (Tesla, Inc.)\n Generated: 2026-09-13 06:38 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: HOLD / WATCH\nPrice: $248.5 | Edge: 56.4/100 | Win Prob: 63.0%\nExpected return: 2.28%\n\nALLOCATION\n  Target weight: 5.83%\n  Notional: $5,830.00\n  Shares: 23\n  Risk decision: APPROVE\n\nTHESIS\n  TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: neutral / trend=sideways (score 47)\n  Fundamentals: undervalued / attractive (score 73)\n  News tape: bullish (score 63)\n\nSCENARIOS\n  Bull: $280.12 (12.7%)\n  Base: $249.14 (0.3%)\n  Bear: $231.97 (-6.7%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Tesla expands energy storage deployments in Europe\n  \u2022 Robotaxi software milestone reported by analysts\n\nKEY RISKS\n  \u2022 EV price competition intensifies in China\n\nANALYST CONSENSUS\n  Technical=hold | Fundamental=buy\n  News=hold | Quant=hold\n  Votes \u2192 buy:1 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+        "summary": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 TSLA (Tesla, Inc.)\n Generated: 2026-09-13 06:38 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: HOLD / WATCH\nPrice: $248.5 | Edge: 56.4/100 | Win Prob: 63.0%\nExpected return: 2.28%\n\nALLOCATION\n  Target weight: 5.83%\n  Notional: $5,830.00\n  Shares: 23\n  Risk decision: APPROVE\n\nTHESIS\n  TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: neutral / trend=sideways (score 47)\n  Fundamentals: undervalued / attractive (score 73)\n  News tape: bullish (score 63)\n\nSCENARIOS\n  Bull: $280.12 (12.7%)\n  Base: $249.14 (0.3%)\n  Bear: $231.97 (-6.7%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Tesla expands energy storage deployments in Europe\n  \u2022 Robotaxi software milestone reported by analysts\n\nKEY RISKS\n  \u2022 EV price competition intensifies in China\n\nANALYST CONSENSUS\n  Technical=hold | Fundamental=buy\n  News=hold | Quant=hold\n  Votes \u2192 buy:1 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+      }
+    }
+  ],
+  "memo": {
+    "recommendation": "HOLD / WATCH",
+    "allocation_pct": 0.0583,
+    "allocation_dollars": 5830.0,
+    "shares": 23,
+    "thesis": "TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.",
+    "scenarios": {
+      "bull": {
+        "price": 280.12,
+        "return_pct": 12.7,
+        "prob": 25.3
+      },
+      "base": {
+        "price": 249.14,
+        "return_pct": 0.3,
+        "prob": 58.2
+      },
+      "bear": {
+        "price": 231.97,
+        "return_pct": -6.7,
+        "prob": 16.5
+      }
+    },
+    "risks": [
+      "EV price competition intensifies in China"
+    ],
+    "catalysts": [
+      "Tesla expands energy storage deployments in Europe",
+      "Robotaxi software milestone reported by analysts"
+    ],
+    "edge_score": 56.4,
+    "win_probability": 63.0,
+    "expected_return": 2.28,
+    "full_memo": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 TSLA (Tesla, Inc.)\n Generated: 2026-09-13 06:38 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: HOLD / WATCH\nPrice: $248.5 | Edge: 56.4/100 | Win Prob: 63.0%\nExpected return: 2.28%\n\nALLOCATION\n  Target weight: 5.83%\n  Notional: $5,830.00\n  Shares: 23\n  Risk decision: APPROVE\n\nTHESIS\n  TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: neutral / trend=sideways (score 47)\n  Fundamentals: undervalued / attractive (score 73)\n  News tape: bullish (score 63)\n\nSCENARIOS\n  Bull: $280.12 (12.7%)\n  Base: $249.14 (0.3%)\n  Bear: $231.97 (-6.7%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Tesla expands energy storage deployments in Europe\n  \u2022 Robotaxi software milestone reported by analysts\n\nKEY RISKS\n  \u2022 EV price competition intensifies in China\n\nANALYST CONSENSUS\n  Technical=hold | Fundamental=buy\n  News=hold | Quant=hold\n  Votes \u2192 buy:1 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+    "trade_rejected": false,
+    "rejection_reason": "",
+    "risk_decision": "APPROVE"
+  },
+  "opportunities": [
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "price": 165.4,
+      "change_pct": 0.7,
+      "momentum_5d": -1.22,
+      "volume_ratio": 0.88,
+      "opportunity_score": 57.87,
+      "sector": "Communication Services",
+      "rank": 1
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "price": 185.6,
+      "change_pct": 1.2,
+      "momentum_5d": -2.09,
+      "volume_ratio": 0.89,
+      "opportunity_score": 49.66,
+      "sector": "Consumer Cyclical",
+      "rank": 2
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "price": 128.4,
+      "change_pct": 3.1,
+      "momentum_5d": -1.4,
+      "volume_ratio": 1.12,
+      "opportunity_score": 48.8,
+      "sector": "Technology",
+      "rank": 3
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "price": 248.5,
+      "change_pct": 2.35,
+      "momentum_5d": -0.72,
+      "volume_ratio": 1.19,
+      "opportunity_score": 46.75,
+      "sector": "Consumer Cyclical",
+      "rank": 4
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "price": 560.1,
+      "change_pct": 1.55,
+      "momentum_5d": -9.14,
+      "volume_ratio": 0.86,
+      "opportunity_score": 46.72,
+      "sector": "Communication Services",
+      "rank": 5
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "price": 430.2,
+      "change_pct": 0.45,
+      "momentum_5d": -5.58,
+      "volume_ratio": 0.9,
+      "opportunity_score": 45.78,
+      "sector": "Technology",
+      "rank": 6
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "price": 227.8,
+      "change_pct": 0.85,
+      "momentum_5d": -5.44,
+      "volume_ratio": 0.95,
+      "opportunity_score": 38.39,
+      "sector": "Technology",
+      "rank": 7
+    }
+  ],
+  "report_sections": {
+    "1. Market Scout": "Market Scout scanned 7 names.\nFocus ticker: TSLA (Tesla, Inc.) @ $248.5\nDay change: 2.35% | Sector: Consumer Cyclical\nOpportunity rank: #4 | score=46.75\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)\n  #4 TSLA: score=46.75 (2.35% / mom5d=-0.72%)\n  #5 META: score=46.72 (1.55% / mom5d=-9.14%)",
+    "3. Fundamental Analyst": "Fundamental Analysis \u2014 TSLA (Tesla, Inc.)\n  Sector/Industry: Consumer Cyclical / Auto Manufacturers\n  Price: $248.5 | Market Cap: $790.0B\n  P/E: 62.50 | Forward P/E: 48.00\n  P/B: 12.10 | P/S: 8.40\n  EPS: 3.98 | ROE: 22.0%\n  Revenue growth: 18.0% | Profit margin: 9.5%\n  Debt/Equity: 0.18 | Beta: 2.05\n  52w range: 138.8 \u2013 299.29\n  Valuation verdict: undervalued / attractive (score 73/100)",
+    "4. News Analyst": "News & Catalyst Analysis \u2014 TSLA\n  Aggregate sentiment: bullish (score=0.333)\n  Breakdown: +2 / -1 / ~0\n  Headlines:\n    [POSITIVE] Tesla expands energy storage deployments in Europe \u2014 DemoWire\n      Megapack orders accelerate as utilities seek grid flexibility.\n    [NEGATIVE] EV price competition intensifies in China \u2014 DemoMarkets\n      Margins under pressure from local EV rivals cutting prices.\n    [POSITIVE] Robotaxi software milestone reported by analysts \u2014 DemoTech\n      Incremental FSD progress keeps long-term optionality alive.\n  Key catalysts:\n    \u2022 Tesla expands energy storage deployments in Europe\n    \u2022 Robotaxi software milestone reported by analysts\n  Headline risks:\n    \u2022 EV price competition intensifies in China",
+    "2. Technical Analyst": "Technical Analysis \u2014 TSLA\n  Price: $248.5\n  RSI(14): 49.46 \u2192 neutral\n  MACD: 0.6852 | signal=1.1783 | hist=-0.4931\n  SMA20: 249.33 | SMA50: 242.67 | EMA12: 247.85\n  Trend: sideways | Bias: neutral\n  Signal balance: 1 bullish / 2 bearish\n  Technical score: 47/100",
+    "5. Quant Analyst": "Quant Analysis \u2014 TSLA\n  Edge score: 56.4/100\n  Win probability: 63.0%\n  Expected return (scenario-weighted): 2.28%\n  Factor contributions:\n    Technical momentum: 47.0\n    Fundamental quality: 73.0\n    News sentiment: 63.0\n    Relative strength: 39.0\n    Beta: 2.05\n  Scenarios:\n    Bull: $280.12 (12.7%) p=25.3%\n    Base: $249.14 (0.3%) p=58.2%\n    Bear: $231.97 (-6.7%) p=16.5%",
+    "6. Risk Manager": "Risk Management \u2014 TSLA\n  Decision: APPROVE\n  Portfolio value: $100,000\n  Proposed size: 5.83% ($5,830.00 / 23 shares @ $248.5)\n  Max position cap: 10.0%\n  Est. max loss (bear): $390.61\n  Beta: 2.05\n  Stress tests:\n    Market -20%: position loss \u2248 -41.0%\n    Bear scenario: -6.7% \u2192 $231.97\n    Gap -8%: $800.0 on full-cap size\n  Notes: within risk limits",
+    "7. Portfolio Manager": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 TSLA (Tesla, Inc.)\n Generated: 2026-09-13 06:38 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: HOLD / WATCH\nPrice: $248.5 | Edge: 56.4/100 | Win Prob: 63.0%\nExpected return: 2.28%\n\nALLOCATION\n  Target weight: 5.83%\n  Notional: $5,830.00\n  Shares: 23\n  Risk decision: APPROVE\n\nTHESIS\n  TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: neutral / trend=sideways (score 47)\n  Fundamentals: undervalued / attractive (score 73)\n  News tape: bullish (score 63)\n\nSCENARIOS\n  Bull: $280.12 (12.7%)\n  Base: $249.14 (0.3%)\n  Bear: $231.97 (-6.7%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Tesla expands energy storage deployments in Europe\n  \u2022 Robotaxi software milestone reported by analysts\n\nKEY RISKS\n  \u2022 EV price competition intensifies in China\n\nANALYST CONSENSUS\n  Technical=hold | Fundamental=buy\n  News=hold | Quant=hold\n  Votes \u2192 buy:1 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+  },
+  "raw": {
+    "market_scout": {
+      "focus_ticker": "TSLA",
+      "quote": {
+        "symbol": "TSLA",
+        "name": "Tesla, Inc.",
+        "price": 248.5,
+        "change_pct": 2.35,
+        "volume": 95000000,
+        "avg_volume": 80000000,
+        "market_cap": 790000000000,
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers",
+        "pe_ratio": 62.5,
+        "forward_pe": 48.0,
+        "pb_ratio": 12.1,
+        "ps_ratio": 8.4,
+        "eps": 3.98,
+        "revenue_growth": 0.18,
+        "profit_margin": 0.095,
+        "debt_to_equity": 0.18,
+        "roe": 0.22,
+        "beta": 2.05,
+        "52w_high": 299.29,
+        "52w_low": 138.8,
+        "dividend_yield": 0.0
+      },
+      "opportunities": [
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet Inc.",
+          "price": 165.4,
+          "change_pct": 0.7,
+          "momentum_5d": -1.22,
+          "volume_ratio": 0.88,
+          "opportunity_score": 57.87,
+          "sector": "Communication Services",
+          "rank": 1
+        },
+        {
+          "ticker": "AMZN",
+          "name": "Amazon.com, Inc.",
+          "price": 185.6,
+          "change_pct": 1.2,
+          "momentum_5d": -2.09,
+          "volume_ratio": 0.89,
+          "opportunity_score": 49.66,
+          "sector": "Consumer Cyclical",
+          "rank": 2
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA Corporation",
+          "price": 128.4,
+          "change_pct": 3.1,
+          "momentum_5d": -1.4,
+          "volume_ratio": 1.12,
+          "opportunity_score": 48.8,
+          "sector": "Technology",
+          "rank": 3
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "price": 248.5,
+          "change_pct": 2.35,
+          "momentum_5d": -0.72,
+          "volume_ratio": 1.19,
+          "opportunity_score": 46.75,
+          "sector": "Consumer Cyclical",
+          "rank": 4
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms, Inc.",
+          "price": 560.1,
+          "change_pct": 1.55,
+          "momentum_5d": -9.14,
+          "volume_ratio": 0.86,
+          "opportunity_score": 46.72,
+          "sector": "Communication Services",
+          "rank": 5
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft Corporation",
+          "price": 430.2,
+          "change_pct": 0.45,
+          "momentum_5d": -5.58,
+          "volume_ratio": 0.9,
+          "opportunity_score": 45.78,
+          "sector": "Technology",
+          "rank": 6
+        },
+        {
+          "ticker": "AAPL",
+          "name": "Apple Inc.",
+          "price": 227.8,
+          "change_pct": 0.85,
+          "momentum_5d": -5.44,
+          "volume_ratio": 0.95,
+          "opportunity_score": 38.39,
+          "sector": "Technology",
+          "rank": 7
+        }
+      ],
+      "thesis": "TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.",
+      "summary": "Market Scout scanned 7 names.\nFocus ticker: TSLA (Tesla, Inc.) @ $248.5\nDay change: 2.35% | Sector: Consumer Cyclical\nOpportunity rank: #4 | score=46.75\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)\n  #4 TSLA: score=46.75 (2.35% / mom5d=-0.72%)\n  #5 META: score=46.72 (1.55% / mom5d=-9.14%)"
+    },
+    "technical": {
+      "rsi": 49.46,
+      "macd": {
+        "macd": 0.6852,
+        "signal": 1.1783,
+        "histogram": -0.4931
+      },
+      "sma_20": 249.33,
+      "sma_50": 242.67,
+      "ema_12": 247.85,
+      "price": 248.5,
+      "trend": "sideways",
+      "bias": "neutral",
+      "score": 47,
+      "bullish_signals": 1,
+      "bearish_signals": 2,
+      "ticker": "TSLA",
+      "recommendation": "hold",
+      "summary": "Technical Analysis \u2014 TSLA\n  Price: $248.5\n  RSI(14): 49.46 \u2192 neutral\n  MACD: 0.6852 | signal=1.1783 | hist=-0.4931\n  SMA20: 249.33 | SMA50: 242.67 | EMA12: 247.85\n  Trend: sideways | Bias: neutral\n  Signal balance: 1 bullish / 2 bearish\n  Technical score: 47/100"
+    },
+    "fundamental": {
+      "ticker": "TSLA",
+      "quote": {
+        "symbol": "TSLA",
+        "name": "Tesla, Inc.",
+        "price": 248.5,
+        "change_pct": 2.35,
+        "volume": 95000000,
+        "avg_volume": 80000000,
+        "market_cap": 790000000000,
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers",
+        "pe_ratio": 62.5,
+        "forward_pe": 48.0,
+        "pb_ratio": 12.1,
+        "ps_ratio": 8.4,
+        "eps": 3.98,
+        "revenue_growth": 0.18,
+        "profit_margin": 0.095,
+        "debt_to_equity": 0.18,
+        "roe": 0.22,
+        "beta": 2.05,
+        "52w_high": 299.29,
+        "52w_low": 138.8,
+        "dividend_yield": 0.0
+      },
+      "valuation": "undervalued / attractive",
+      "score": 73,
+      "recommendation": "buy",
+      "summary": "Fundamental Analysis \u2014 TSLA (Tesla, Inc.)\n  Sector/Industry: Consumer Cyclical / Auto Manufacturers\n  Price: $248.5 | Market Cap: $790.0B\n  P/E: 62.50 | Forward P/E: 48.00\n  P/B: 12.10 | P/S: 8.40\n  EPS: 3.98 | ROE: 22.0%\n  Revenue growth: 18.0% | Profit margin: 9.5%\n  Debt/Equity: 0.18 | Beta: 2.05\n  52w range: 138.8 \u2013 299.29\n  Valuation verdict: undervalued / attractive (score 73/100)"
+    },
+    "news": {
+      "ticker": "TSLA",
+      "articles": [
+        {
+          "title": "Tesla expands energy storage deployments in Europe",
+          "sentiment": "positive",
+          "source": "DemoWire",
+          "summary": "Megapack orders accelerate as utilities seek grid flexibility."
+        },
+        {
+          "title": "EV price competition intensifies in China",
+          "sentiment": "negative",
+          "source": "DemoMarkets",
+          "summary": "Margins under pressure from local EV rivals cutting prices."
+        },
+        {
+          "title": "Robotaxi software milestone reported by analysts",
+          "sentiment": "positive",
+          "source": "DemoTech",
+          "summary": "Incremental FSD progress keeps long-term optionality alive."
+        }
+      ],
+      "sentiment": {
+        "label": "bullish",
+        "score": 0.333,
+        "positive": 2,
+        "negative": 1,
+        "neutral": 0
+      },
+      "catalysts": [
+        "Tesla expands energy storage deployments in Europe",
+        "Robotaxi software milestone reported by analysts"
+      ],
+      "risks": [
+        "EV price competition intensifies in China"
+      ],
+      "score": 63,
+      "recommendation": "hold",
+      "summary": "News & Catalyst Analysis \u2014 TSLA\n  Aggregate sentiment: bullish (score=0.333)\n  Breakdown: +2 / -1 / ~0\n  Headlines:\n    [POSITIVE] Tesla expands energy storage deployments in Europe \u2014 DemoWire\n      Megapack orders accelerate as utilities seek grid flexibility.\n    [NEGATIVE] EV price competition intensifies in China \u2014 DemoMarkets\n      Margins under pressure from local EV rivals cutting prices.\n    [POSITIVE] Robotaxi software milestone reported by analysts \u2014 DemoTech\n      Incremental FSD progress keeps long-term optionality alive.\n  Key catalysts:\n    \u2022 Tesla expands energy storage deployments in Europe\n    \u2022 Robotaxi software milestone reported by analysts\n  Headline risks:\n    \u2022 EV price competition intensifies in China"
+    },
+    "quant": {
+      "ticker": "TSLA",
+      "edge_score": 56.4,
+      "win_probability": 63.0,
+      "expected_return": 2.28,
+      "factors": {
+        "technical_momentum": 47.0,
+        "fundamental_quality": 73.0,
+        "news_sentiment": 63.0,
+        "relative_strength": 39.0,
+        "volatility_proxy_beta": 2.05
+      },
+      "scenarios": {
+        "bull": {
+          "price": 280.12,
+          "return_pct": 12.7,
+          "prob": 25.3
+        },
+        "base": {
+          "price": 249.14,
+          "return_pct": 0.3,
+          "prob": 58.2
+        },
+        "bear": {
+          "price": 231.97,
+          "return_pct": -6.7,
+          "prob": 16.5
+        }
+      },
+      "weights": {
+        "technical": 0.3,
+        "fundamental": 0.3,
+        "news": 0.2,
+        "momentum": 0.2
+      },
+      "recommendation": "hold",
+      "summary": "Quant Analysis \u2014 TSLA\n  Edge score: 56.4/100\n  Win probability: 63.0%\n  Expected return (scenario-weighted): 2.28%\n  Factor contributions:\n    Technical momentum: 47.0\n    Fundamental quality: 73.0\n    News sentiment: 63.0\n    Relative strength: 39.0\n    Beta: 2.05\n  Scenarios:\n    Bull: $280.12 (12.7%) p=25.3%\n    Base: $249.14 (0.3%) p=58.2%\n    Bear: $231.97 (-6.7%) p=16.5%"
+    },
+    "risk": {
+      "ticker": "TSLA",
+      "decision": "APPROVE",
+      "trade_rejected": false,
+      "rejection_reason": "",
+      "position_pct": 0.0583,
+      "position_dollars": 5830.0,
+      "shares": 23,
+      "max_loss": 390.61,
+      "stress": {
+        "market_crash_-20pct": {
+          "portfolio_impact_pct": -4.1,
+          "position_loss_pct": -41.0
+        },
+        "bear_scenario": {
+          "price": 231.97,
+          "return_pct": -6.7
+        },
+        "gap_down_-8pct": {
+          "dollar_loss_on_full_size": 800.0
+        }
+      },
+      "reasons": [
+        "within risk limits"
+      ],
+      "summary": "Risk Management \u2014 TSLA\n  Decision: APPROVE\n  Portfolio value: $100,000\n  Proposed size: 5.83% ($5,830.00 / 23 shares @ $248.5)\n  Max position cap: 10.0%\n  Est. max loss (bear): $390.61\n  Beta: 2.05\n  Stress tests:\n    Market -20%: position loss \u2248 -41.0%\n    Bear scenario: -6.7% \u2192 $231.97\n    Gap -8%: $800.0 on full-cap size\n  Notes: within risk limits"
+    },
+    "portfolio": {
+      "ticker": "TSLA",
+      "action": "HOLD / WATCH",
+      "allocation_pct": 0.0583,
+      "allocation_dollars": 5830.0,
+      "shares": 23,
+      "memo": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 TSLA (Tesla, Inc.)\n Generated: 2026-09-13 06:38 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: HOLD / WATCH\nPrice: $248.5 | Edge: 56.4/100 | Win Prob: 63.0%\nExpected return: 2.28%\n\nALLOCATION\n  Target weight: 5.83%\n  Notional: $5,830.00\n  Shares: 23\n  Risk decision: APPROVE\n\nTHESIS\n  TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: neutral / trend=sideways (score 47)\n  Fundamentals: undervalued / attractive (score 73)\n  News tape: bullish (score 63)\n\nSCENARIOS\n  Bull: $280.12 (12.7%)\n  Base: $249.14 (0.3%)\n  Bear: $231.97 (-6.7%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Tesla expands energy storage deployments in Europe\n  \u2022 Robotaxi software milestone reported by analysts\n\nKEY RISKS\n  \u2022 EV price competition intensifies in China\n\nANALYST CONSENSUS\n  Technical=hold | Fundamental=buy\n  News=hold | Quant=hold\n  Votes \u2192 buy:1 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "summary": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 TSLA (Tesla, Inc.)\n Generated: 2026-09-13 06:38 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: HOLD / WATCH\nPrice: $248.5 | Edge: 56.4/100 | Win Prob: 63.0%\nExpected return: 2.28%\n\nALLOCATION\n  Target weight: 5.83%\n  Notional: $5,830.00\n  Shares: 23\n  Risk decision: APPROVE\n\nTHESIS\n  TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: neutral / trend=sideways (score 47)\n  Fundamentals: undervalued / attractive (score 73)\n  News tape: bullish (score 63)\n\nSCENARIOS\n  Bull: $280.12 (12.7%)\n  Base: $249.14 (0.3%)\n  Bear: $231.97 (-6.7%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Tesla expands energy storage deployments in Europe\n  \u2022 Robotaxi software milestone reported by analysts\n\nKEY RISKS\n  \u2022 EV price competition intensifies in China\n\nANALYST CONSENSUS\n  Technical=hold | Fundamental=buy\n  News=hold | Quant=hold\n  Votes \u2192 buy:1 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550"
+    },
+    "trade_rejected": false,
+    "rejection_reason": "",
+    "investment_memo": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 TSLA (Tesla, Inc.)\n Generated: 2026-09-13 06:38 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: HOLD / WATCH\nPrice: $248.5 | Edge: 56.4/100 | Win Prob: 63.0%\nExpected return: 2.28%\n\nALLOCATION\n  Target weight: 5.83%\n  Notional: $5,830.00\n  Shares: 23\n  Risk decision: APPROVE\n\nTHESIS\n  TSLA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: neutral / trend=sideways (score 47)\n  Fundamentals: undervalued / attractive (score 73)\n  News tape: bullish (score 63)\n\nSCENARIOS\n  Bull: $280.12 (12.7%)\n  Base: $249.14 (0.3%)\n  Bear: $231.97 (-6.7%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Tesla expands energy storage deployments in Europe\n  \u2022 Robotaxi software milestone reported by analysts\n\nKEY RISKS\n  \u2022 EV price competition intensifies in China\n\nANALYST CONSENSUS\n  Technical=hold | Fundamental=buy\n  News=hold | Quant=hold\n  Votes \u2192 buy:1 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+    "errors": []
+  },
+  "scan_ranking": [
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "price": 165.4,
+      "change_pct": 0.7,
+      "momentum_5d": -1.22,
+      "volume_ratio": 0.88,
+      "opportunity_score": 57.87,
+      "sector": "Communication Services",
+      "rank": 1
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "price": 185.6,
+      "change_pct": 1.2,
+      "momentum_5d": -2.09,
+      "volume_ratio": 0.89,
+      "opportunity_score": 49.66,
+      "sector": "Consumer Cyclical",
+      "rank": 2
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "price": 128.4,
+      "change_pct": 3.1,
+      "momentum_5d": -1.4,
+      "volume_ratio": 1.12,
+      "opportunity_score": 48.8,
+      "sector": "Technology",
+      "rank": 3
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "price": 248.5,
+      "change_pct": 2.35,
+      "momentum_5d": -0.72,
+      "volume_ratio": 1.19,
+      "opportunity_score": 46.75,
+      "sector": "Consumer Cyclical",
+      "rank": 4
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "price": 560.1,
+      "change_pct": 1.55,
+      "momentum_5d": -9.14,
+      "volume_ratio": 0.86,
+      "opportunity_score": 46.72,
+      "sector": "Communication Services",
+      "rank": 5
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "price": 430.2,
+      "change_pct": 0.45,
+      "momentum_5d": -5.58,
+      "volume_ratio": 0.9,
+      "opportunity_score": 45.78,
+      "sector": "Technology",
+      "rank": 6
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "price": 227.8,
+      "change_pct": 0.85,
+      "momentum_5d": -5.44,
+      "volume_ratio": 0.95,
+      "opportunity_score": 38.39,
+      "sector": "Technology",
+      "rank": 7
+    }
+  ]
+}

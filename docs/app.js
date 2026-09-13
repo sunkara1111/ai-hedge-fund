@@ -9,11 +9,6 @@ const AGENTS = [
 ];
 
 const els = {
-  form: document.getElementById("analyze-form"),
-  ticker: document.getElementById("ticker"),
-  demo: document.getElementById("demo"),
-  analyzeBtn: document.getElementById("btn-analyze"),
-  scanBtn: document.getElementById("btn-scan"),
   stack: document.getElementById("agent-stack"),
   status: document.getElementById("status-line"),
   modePill: document.getElementById("mode-pill"),
@@ -35,24 +30,6 @@ const els = {
   mRisks: document.getElementById("m-risks"),
   mFull: document.getElementById("m-full"),
 };
-
-function initFromQuery() {
-  const q = new URLSearchParams(window.location.search);
-  if (q.has("demo")) {
-    const v = q.get("demo");
-    els.demo.checked = !(v === "0" || v === "false");
-  }
-  if (q.get("ticker")) els.ticker.value = q.get("ticker").toUpperCase();
-}
-
-function renderSkeleton(status = "pending") {
-  els.stack.innerHTML = AGENTS.map((a) => agentCardHtml(a, {
-    status,
-    verdict: { label: "—", detail: "Waiting…", tone: "neutral" },
-    rationale: "",
-  })).join("");
-  bindCardToggles();
-}
 
 function agentCardHtml(meta, agent) {
   const status = agent.status || "pending";
@@ -101,19 +78,20 @@ function escapeHtml(s) {
     .replace(/>/g, "&gt;");
 }
 
-function setBusy(busy, label = "Running pipeline…") {
-  els.analyzeBtn.disabled = busy;
-  els.scanBtn.disabled = busy;
-  els.modePill.textContent = busy ? "RUNNING" : els.modePill.dataset.mode || "IDLE";
-  els.modePill.classList.toggle("busy", busy);
-  if (busy) els.status.textContent = label;
-}
-
 function toneClass(text) {
   const t = (text || "").toUpperCase();
   if (t.includes("BUY") || t.includes("APPROVE") || t.includes("BULL")) return "bull";
   if (t.includes("SELL") || t.includes("REJECT") || t.includes("PASS") || t.includes("AVOID") || t.includes("BEAR")) return "bear";
   return "";
+}
+
+function renderSkeleton(status = "pending") {
+  els.stack.innerHTML = AGENTS.map((a) => agentCardHtml(a, {
+    status,
+    verdict: { label: "—", detail: "Waiting…", tone: "neutral" },
+    rationale: "",
+  })).join("");
+  bindCardToggles();
 }
 
 function renderAgents(agents) {
@@ -123,14 +101,8 @@ function renderAgents(agents) {
     return agentCardHtml(meta, a);
   }).join("");
   bindCardToggles();
-  // auto-open portfolio + first done agent lightly
   const first = els.stack.querySelector('.agent-card[data-status="done"]');
   if (first) first.classList.add("open");
-}
-
-function pct(v, digits = 2) {
-  if (v === null || v === undefined || Number.isNaN(Number(v))) return "—";
-  return `${(Number(v) * (Math.abs(Number(v)) <= 1 ? 100 : 1)).toFixed(digits)}%`;
 }
 
 function renderMemo(data) {
@@ -213,83 +185,42 @@ function renderMemo(data) {
   }
 }
 
-async function runAnalyze(e) {
-  if (e) e.preventDefault();
-  const ticker = (els.ticker.value || "").trim().toUpperCase();
-  if (!ticker) {
-    els.status.textContent = "Please enter a ticker.";
-    return;
-  }
-  els.ticker.value = ticker;
-  setBusy(true, `Analyzing ${ticker}…`);
+async function loadSample() {
+  els.status.textContent = "Loading bundled sample analysis…";
   renderSkeleton("running");
   try {
-    const res = await fetch("/api/analyze", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ticker, demo: els.demo.checked }),
-    });
+    const res = await fetch("./sample-analysis.json", { cache: "no-cache" });
+    if (!res.ok) throw new Error("Could not load sample-analysis.json");
     const data = await res.json();
-    if (!res.ok) throw new Error(data.detail || "Analyze failed");
     renderAgents(data.agents);
     renderMemo(data);
-    const mode = data.demo ? "DEMO" : "LIVE";
-    els.modePill.textContent = mode;
-    els.modePill.dataset.mode = mode;
-    els.modePill.classList.toggle("live", !data.demo);
-    els.status.textContent = `Done — ${data.ticker} · ${data.agents.filter((a) => a.status === "done").length}/7 agents`;
+    els.modePill.textContent = "SAMPLE DEMO";
+    els.modePill.dataset.mode = "SAMPLE DEMO";
+    els.status.textContent = `Sample analysis — ${data.ticker} · bundled demo data, not live`;
   } catch (err) {
     els.status.textContent = `Error: ${err.message}`;
     els.modePill.textContent = "ERROR";
     renderSkeleton("pending");
-  } finally {
-    setBusy(false);
   }
 }
 
-async function runScan() {
-  setBusy(true, "Scanning universe…");
-  renderSkeleton("running");
-  try {
-    const res = await fetch("/api/scan", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ demo: els.demo.checked }),
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.detail || "Scan failed");
-    if (data.ticker) els.ticker.value = data.ticker;
-    renderAgents(data.agents);
-    renderMemo(data);
-    const mode = data.demo ? "DEMO SCAN" : "LIVE SCAN";
-    els.modePill.textContent = mode;
-    els.modePill.dataset.mode = mode;
-    els.modePill.classList.toggle("live", !data.demo);
-    els.status.textContent = `Scan complete — deep-dive on ${data.ticker}`;
-  } catch (err) {
-    els.status.textContent = `Error: ${err.message}`;
-    els.modePill.textContent = "ERROR";
-    renderSkeleton("pending");
-  } finally {
-    setBusy(false);
-  }
-}
-
-els.form.addEventListener("submit", runAnalyze);
-els.scanBtn.addEventListener("click", runScan);
-initFromQuery();
-renderSkeleton("pending");
-
-// Auto-run if ?autorun=1 or demo query with ticker
-const q = new URLSearchParams(window.location.search);
-if (q.get("autorun") === "1") {
-  runAnalyze();
+function showToast(msg) {
+  const existing = document.querySelector(".toast");
+  if (existing) existing.remove();
+  const t = document.createElement("div");
+  t.className = "toast";
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2200);
 }
 
 document.getElementById("cta-demo")?.addEventListener("click", (event) => {
   event.preventDefault();
   document.getElementById("demo")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  runAnalyze();
+});
+document.getElementById("cta-load")?.addEventListener("click", (event) => {
+  event.preventDefault();
+  document.getElementById("demo")?.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 document.getElementById("btn-copy-share")?.addEventListener("click", async () => {
@@ -302,12 +233,5 @@ document.getElementById("btn-copy-share")?.addEventListener("click", async () =>
   }
 });
 
-function showToast(msg) {
-  const existing = document.querySelector(".toast");
-  if (existing) existing.remove();
-  const t = document.createElement("div");
-  t.className = "toast";
-  t.textContent = msg;
-  document.body.appendChild(t);
-  setTimeout(() => t.remove(), 2200);
-}
+renderSkeleton("pending");
+loadSample();

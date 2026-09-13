@@ -2,7 +2,8 @@
 
 ```
 ╭────────────────────────────────────────────╮
-│ AI Hedge Fund — Analysis Report            │
+│ Sunkara AI Fund — Analysis Report          │
+│ Founded by Dineshgopi Sunkara              │
 │ Ticker: TSLA  |  Mode: DEMO (mock data…)   │
 ╰────────────────────────────────────────────╯
 
@@ -39,3 +40,5 @@ Technical Analysis — TSLA
 ```
 
 All seven sections are always printed in demo analysis (Portfolio Manager is skipped only when Risk Manager rejects, in which case a rejection note is shown as section 7).
+
+Paper / research only. Not financial advice. Founded by Dineshgopi Sunkara.

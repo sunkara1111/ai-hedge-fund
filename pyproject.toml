@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ai-hedge-fund"
-version = "1.1.0"
-description = "Multi-agent AI hedge fund powered by LangGraph — 7 specialized agents for investment research"
+version = "1.2.0"
+description = "Sunkara AI Fund — 7-agent investment research floor founded by Dineshgopi Sunkara"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "sunkara1111"}]
+authors = [{name = "Dineshgopi Sunkara"}]
 dependencies = [
     "langgraph>=0.2.0",
     "langchain>=0.3.0",
@@ -28,7 +28,7 @@ dependencies = [
 
 [project.optional-dependencies]
 alpaca = ["alpaca-py>=0.21.0"]
-dev = ["pytest>=8.0.0"]
+dev = ["pytest>=8.0.0", "pillow>=10.0.0", "httpx>=0.27.0"]
 
 [project.scripts]
 hedge-fund = "hedge_fund.cli:main"
@@ -38,6 +38,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 hedge_fund = ["web/static/*"]
+
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

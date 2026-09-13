@@ -1,4 +1,4 @@
-"""CLI entrypoint for the AI hedge fund."""
+"""CLI entrypoint for Sunkara AI Fund."""
 
 from __future__ import annotations
 
@@ -9,6 +9,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.rule import Rule
 
+from hedge_fund.branding import FOUNDER_CREDIT, PRODUCT_NAME
 from hedge_fund.demo_data import DEMO_UNIVERSE
 from hedge_fund.graph import run_analysis
 
@@ -32,7 +33,7 @@ def _print_report(result: dict) -> None:
     console.print()
     console.print(
         Panel.fit(
-            f"[bold]AI Hedge Fund[/bold] — Analysis Report\n"
+            f"[bold]{PRODUCT_NAME}[/bold] — Analysis Report\n[dim]{FOUNDER_CREDIT}[/dim]\n"
             f"Ticker: [cyan]{ticker}[/cyan]  |  Mode: [yellow]{mode}[/yellow]",
             border_style="green",
         )
@@ -120,7 +121,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="hedge_fund",
-        description="Multi-agent AI hedge fund — research & paper-trading assistant",
+        description="Sunkara AI Fund — 7-agent paper-research assistant (not live trading)",
     )
     sub = p.add_subparsers(dest="command", required=True)
 

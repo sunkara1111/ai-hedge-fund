@@ -11,15 +11,16 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
+from hedge_fund.branding import FOUNDER_CREDIT, FOUNDER_NAME, PRODUCT_NAME
 from hedge_fund.demo_data import DEMO_UNIVERSE
 from hedge_fund.graph import run_analysis
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
 app = FastAPI(
-    title="AI Hedge Fund Dashboard",
-    description="Multi-agent investment research UI",
-    version="1.0.0",
+    title="Sunkara AI Fund",
+    description="7-agent investment research dashboard. Founded by Dineshgopi Sunkara. Paper / research only.",
+    version="1.2.0",
 )
 
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
@@ -254,7 +255,16 @@ def index():
 
 @app.get("/api/health")
 def health():
-    return {"ok": True, "service": "ai-hedge-fund", "agents": len(AGENT_META)}
+    return {
+        "ok": True,
+        "service": "sunkara-ai-fund",
+        "product": PRODUCT_NAME,
+        "founder": FOUNDER_NAME,
+        "founder_credit": FOUNDER_CREDIT,
+        "agents": len(AGENT_META),
+        "mode": "paper-research",
+        "handles_real_money": False,
+    }
 
 
 @app.post("/api/analyze")

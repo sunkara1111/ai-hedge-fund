@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#ff6b00" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://sunkara1111.github.io/ai-hedge-fund/" />
-  <link rel="icon" type="image/png" href="/static/favicon.png" />
-  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Sunkara AI Fund" />
@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -44,24 +44,15 @@
       </div>
     </div>
     <nav class="nav" aria-label="Primary">
-      <a href="#demo">Try demo</a>
+      <a href="#demo">Sample analysis</a>
       <a href="#agents">Agents</a>
       <a href="#about">About</a>
       <a href="https://github.com/sunkara1111/ai-hedge-fund" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
-    <form class="controls" id="analyze-form">
-      <label class="field ticker-field">
-        <span>Ticker</span>
-        <input id="ticker" name="ticker" type="text" maxlength="12" placeholder="TSLA" value="TSLA" autocomplete="off" />
-      </label>
-      <label class="demo-toggle" title="Run without ANTHROPIC_API_KEY">
-        <input type="checkbox" id="demo" checked />
-        <span class="switch"></span>
-        <span class="demo-label">Demo</span>
-      </label>
-      <button type="submit" class="btn btn-primary" id="btn-analyze">Analyze</button>
-      <button type="button" class="btn btn-ghost" id="btn-scan">Scan</button>
-    </form>
+    <div class="controls">
+      <a class="btn btn-primary" href="#demo" id="cta-load">View sample</a>
+      <a class="btn btn-ghost" href="https://github.com/sunkara1111/ai-hedge-fund" target="_blank" rel="noopener noreferrer">Inspect GitHub</a>
+    </div>
   </header>
 
   <section class="hero" id="top">
@@ -69,10 +60,10 @@
     <h1>Seven agents. One research memo. Zero live trading.</h1>
     <p class="lede">Sunkara AI Fund is a multi-agent investment research floor. Specialized agents scout opportunities, read technicals, fundamentals, and news, score edge, enforce risk limits, and write a paper memo. Founded by Dineshgopi Sunkara.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#demo" id="cta-demo">Try the demo</a>
+      <a class="btn btn-primary" href="#demo" id="cta-demo">View sample analysis</a>
       <a class="btn btn-ghost" href="https://github.com/sunkara1111/ai-hedge-fund" target="_blank" rel="noopener noreferrer">Inspect GitHub</a>
     </div>
-    <p class="hero-note">This is not a live trading product, not financial advice, and it does not handle real money. Demo data is canned; simulated scores do not predict future results.</p>
+    <p class="hero-note">This public page is a static showcase. It does not call a live backend or handle real money. The TSLA walkthrough below is bundled demo data from the open-source pipeline.</p>
   </section>
 
   <section class="arch" id="agents">
@@ -100,27 +91,30 @@
     </div>
   </section>
 
-  <main class="layout" id="demo">
+  <div class="sample-banner" id="demo-banner">
+    <strong>Sample / demo analysis — not live data.</strong>
+    Bundled TSLA walkthrough from the local <code>--demo</code> pipeline. Run the FastAPI dashboard from the GitHub repo to analyze other tickers on your machine.
+  </div>
+
+  <main class="layout showcase" id="demo">
     <section class="floor">
       <div class="section-head">
         <h2>Agent Floors</h2>
-        <p id="status-line" class="muted">Enter a ticker and run analysis — or scan the demo universe.</p>
+        <p id="status-line" class="muted">Loading bundled sample analysis…</p>
       </div>
-      <div class="agent-stack" id="agent-stack">
-        <!-- cards injected -->
-      </div>
+      <div class="agent-stack" id="agent-stack"></div>
     </section>
 
     <aside class="memo-panel">
       <div class="section-head">
         <h2>Final Investment Memo</h2>
-        <span class="pill" id="mode-pill">IDLE</span>
+        <span class="pill" id="mode-pill">SAMPLE</span>
       </div>
 
       <div class="memo-hero" id="memo-hero">
         <div class="memo-empty">
           <div class="memo-empty-icon">◇</div>
-          <p>Combined result appears here after the pipeline finishes.</p>
+          <p>Bundled sample result appears here.</p>
         </div>
       </div>
 
@@ -174,7 +168,7 @@
         <div class="scan-list" id="scan-list"></div>
       </div>
 
-      <p class="disclaimer">Paper / research only. Not financial advice. Demo and simulated scores do not predict future results. This dashboard does not handle real money.</p>
+      <p class="disclaimer">Paper / research only. Not financial advice. This showcase uses included demo data and does not handle real money.</p>
     </aside>
   </main>
 
@@ -194,6 +188,6 @@
     <p class="disclaimer">MIT license. Use at your own risk. Not investment advice. No AUM, returns, or customer claims.</p>
   </footer>
 
-  <script src="/static/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>

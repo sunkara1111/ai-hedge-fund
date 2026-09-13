@@ -1,8 +1,12 @@
-# AI Hedge Fund
+# Sunkara AI Fund
+
+**Founded by Dineshgopi Sunkara**
 
 A **complete, runnable** multi-agent investment research system. Seven specialized agents collaborate via [LangGraph](https://github.com/langchain-ai/langgraph) to scout opportunities, analyze technicals/fundamentals/news, score edge, enforce risk limits, and produce an investment memo.
 
-> **Disclaimer — paper / research only.** This project is for education and experimentation. It is **not financial advice**. Do not use it to make real trading decisions without independent due diligence. Simulated scores and demo data do not predict future results.
+Public showcase: [https://sunkara1111.github.io/ai-hedge-fund/](https://sunkara1111.github.io/ai-hedge-fund/)
+
+> **Disclaimer — paper / research only.** This project is for education and experimentation. It is **not financial advice**. It does **not** handle real money, execute live trades, or manage client capital. Do not use it to make real trading decisions without independent due diligence. Simulated scores and demo data do not predict future results. No AUM, returns, or customer claims.
 
 ## Architecture
 
@@ -80,21 +84,22 @@ ai-hedge-fund/
   pyproject.toml
   .env.example
   .gitignore
+  docs/                 # GitHub Pages static showcase
   src/hedge_fund/
-    __init__.py
-    state.py          # TypedDict AgentState
-    graph.py          # LangGraph wiring + conditional risk routing
+    branding.py         # product name + founder credit
+    state.py            # TypedDict AgentState
+    graph.py            # LangGraph wiring + conditional risk routing
     config.py
     cli.py
     demo_data.py
-    llm.py            # optional Anthropic enrichment (skipped in --demo)
-    agents/           # 7 agents
-    tools/            # market_data, indicators, news
+    llm.py              # optional Anthropic enrichment (skipped in --demo)
+    agents/             # 7 agents
+    tools/              # market_data, indicators, news
     web/
-      app.py          # FastAPI + /api/analyze + /api/scan
-      static/         # polished single-page dashboard
+      app.py            # FastAPI + /api/analyze + /api/scan
+      static/           # dashboard + social preview images
   examples/sample_output.md
-  tests/test_graph_smoke.py
+  tests/
 ```
 
 ## Tests
@@ -104,10 +109,9 @@ pip install -e ".[dev]"
 pytest -q
 ```
 
-
 ## Web dashboard
 
-A local product-style UI (cream background, orange accents, 7 agent “floors”, final memo panel) wired to the same LangGraph pipeline.
+A local product-style UI (cream background, orange accents, landing + 7 agent floors, final memo panel) wired to the same LangGraph pipeline.
 
 ```bash
 # install / refresh deps (includes fastapi + uvicorn)
@@ -121,9 +125,10 @@ Open [http://localhost:8000](http://localhost:8000). Use the **Demo** toggle (or
 
 API:
 
+- `GET /` — dashboard UI
+- `GET /api/health` — product, founder, agent count
 - `POST /api/analyze` — body `{ "ticker": "TSLA", "demo": true }`
 - `POST /api/scan` — body `{ "demo": true }`
-- `GET /` — dashboard UI
 
 ```bash
 curl -s -X POST http://localhost:8000/api/analyze \
@@ -131,8 +136,16 @@ curl -s -X POST http://localhost:8000/api/analyze \
   -d '{"ticker":"TSLA","demo":true}' | python -m json.tool | head
 ```
 
-> Screenshot note: open the dashboard after a demo analyze — agent cards 01–07 update on the left, investment memo on the right.
+## Public website
+
+The GitHub Pages site at [https://sunkara1111.github.io/ai-hedge-fund/](https://sunkara1111.github.io/ai-hedge-fund/) is a **static showcase** published from the `docs/` folder on `main`. It uses bundled demo sample data and does not host the live FastAPI backend. Run the dashboard locally to call the pipeline.
+
+Share text:
+
+> Sunkara AI Fund — a 7-agent research floor founded by Dineshgopi Sunkara. Paper / research only, not a live trading product. https://sunkara1111.github.io/ai-hedge-fund/
 
 ## License
 
 MIT — use at your own risk. Not investment advice.
+
+Founded by Dineshgopi Sunkara.
