@@ -891,5 +891,8 @@
       "sector": "Technology",
       "rank": 7
     }
-  ]
+  ],
+  "example_id": "tsla",
+  "example_title": "Example A \u2014 TSLA full 7-agent walkthrough",
+  "example_blurb": "Each agent\u2019s short verdict plus the Combined Result HOLD/WATCH memo from bundled demo data."
 }

@@ -1,0 +1,229 @@
+{
+  "ok": true,
+  "mode": "analyze",
+  "ticker": "NVDA",
+  "demo": true,
+  "portfolio_value": 100000.0,
+  "quote": {
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation",
+    "price": 128.4,
+    "change_pct": 3.1,
+    "volume": 280000000,
+    "avg_volume": 250000000,
+    "market_cap": 3150000000000,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "pe_ratio": 58.0,
+    "forward_pe": 32.0,
+    "pb_ratio": 48.0,
+    "ps_ratio": 32.0,
+    "eps": 2.21,
+    "revenue_growth": 0.95,
+    "profit_margin": 0.55,
+    "debt_to_equity": 0.25,
+    "roe": 1.15,
+    "beta": 1.7,
+    "52w_high": 140.76,
+    "52w_low": 39.23,
+    "dividend_yield": 0.0003
+  },
+  "agents": [
+    {
+      "id": "market_scout",
+      "num": "01",
+      "name": "Market Scout",
+      "icon": "\ud83d\udd2d",
+      "status": "done",
+      "verdict": {
+        "label": "scouted",
+        "score": 48.8,
+        "detail": "$128.4 \u00b7 3.1%",
+        "tone": "neutral"
+      },
+      "rationale": "Market Scout scanned 7 names.\nFocus ticker: NVDA (NVIDIA Corporation) @ $128.4\nDay change: 3.1% | Sector: Technology\nOpportunity rank: #3 | score=48.8\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)"
+    },
+    {
+      "id": "technical",
+      "num": "02",
+      "name": "Technical Analyst",
+      "icon": "\ud83d\udcc8",
+      "status": "done",
+      "verdict": {
+        "label": "BUY",
+        "score": 79,
+        "detail": "bullish \u00b7 uptrend",
+        "tone": "bull"
+      },
+      "rationale": "Technical Analysis \u2014 NVDA\n  Price: $128.4\n  RSI(14): 53.86 \u2192 bullish\n  MACD: 0.9799 | signal=0.8674 | hist=0.1124\n  SMA20: 127.24 | SMA50: 126.64 | EMA12: 128.5\n  Trend: uptrend | Bias: bullish\n  Signal balance: 3 bullish / 0 bearish\n  Technical score: 79/100"
+    },
+    {
+      "id": "fundamental",
+      "num": "03",
+      "name": "Fundamental Analyst",
+      "icon": "\ud83d\udcca",
+      "status": "done",
+      "verdict": {
+        "label": "BUY",
+        "score": 83,
+        "detail": "undervalued / attractive",
+        "tone": "bull"
+      },
+      "rationale": "Fundamental Analysis \u2014 NVDA (NVIDIA Corporation)\n  Sector/Industry: Technology / Semiconductors\n  Price: $128.4 | Market Cap: $3150.0B\n  P/E: 58.00 | Forward P/E: 32.00\n  P/B: 48.00 | P/S: 32.00\n  EPS: 2.21 | ROE: 115.0%\n  Revenue growth: 95.0% | Profit margin: 55.0%\n  Debt/Equity: 0.25 | Beta: 1.70"
+    },
+    {
+      "id": "news",
+      "num": "04",
+      "name": "News Analyst",
+      "icon": "\ud83d\udcf0",
+      "status": "done",
+      "verdict": {
+        "label": "NEUTRAL",
+        "score": 50,
+        "detail": "2 headlines",
+        "tone": "neutral"
+      },
+      "rationale": "News & Catalyst Analysis \u2014 NVDA\n  Aggregate sentiment: neutral (score=0.0)\n  Breakdown: +1 / -1 / ~0\n  Headlines:\n    [POSITIVE] Data-center GPU demand remains robust \u2014 DemoWire\n      Hyperscalers continue multi-year AI infrastructure spend.\n    [NEGATIVE] Export control headlines weigh on sentiment \u2014 DemoMarkets\n      Policy risk remains a watch item for China exposure."
+    },
+    {
+      "id": "quant",
+      "num": "05",
+      "name": "Quant Analyst",
+      "icon": "\ud83e\uddee",
+      "status": "done",
+      "verdict": {
+        "label": "EDGE 66.7",
+        "score": 66.7,
+        "detail": "Win 80.1%",
+        "tone": "bull"
+      },
+      "rationale": "Quant Analysis \u2014 NVDA\n  Edge score: 66.7/100\n  Win probability: 80.1%\n  Expected return (scenario-weighted): 4.9%\n  Factor contributions:\n    Technical momentum: 79.0\n    Fundamental quality: 83.0\n    News sentiment: 50.0"
+    },
+    {
+      "id": "risk",
+      "num": "06",
+      "name": "Risk Manager",
+      "icon": "\ud83d\udee1\ufe0f",
+      "status": "done",
+      "verdict": {
+        "label": "APPROVE",
+        "score": null,
+        "detail": "10.0% size",
+        "tone": "bull"
+      },
+      "rationale": "Risk Management \u2014 NVDA\n  Decision: APPROVE\n  Portfolio value: $100,000\n  Proposed size: 10.00% ($10,000.00 / 77 shares @ $128.4)\n  Max position cap: 10.0%\n  Est. max loss (bear): $540.00\n  Beta: 1.7\n  Stress tests:"
+    },
+    {
+      "id": "portfolio",
+      "num": "07",
+      "name": "Portfolio Manager",
+      "icon": "\ud83d\udccb",
+      "status": "done",
+      "verdict": {
+        "label": "BUY",
+        "score": null,
+        "detail": "10.00% alloc",
+        "tone": "bull"
+      },
+      "rationale": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 NVDA (NVIDIA Corporation)\n Generated: 2026-09-13 07:35 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: BUY\nPrice: $128.4 | Edge: 66.7/100 | Win Prob: 80.1%\nExpected return: 4.9%"
+    }
+  ],
+  "memo": {
+    "recommendation": "BUY",
+    "allocation_pct": 0.1,
+    "allocation_dollars": 10000.0,
+    "shares": 77,
+    "thesis": "NVDA selected for deep-dive based on relative momentum, liquidity, and sector positioning.",
+    "scenarios": {
+      "bull": {
+        "price": 146.76,
+        "return_pct": 14.3,
+        "prob": 35.3
+      },
+      "base": {
+        "price": 129.26,
+        "return_pct": 0.7,
+        "prob": 54.9
+      },
+      "bear": {
+        "price": 121.53,
+        "return_pct": -5.4,
+        "prob": 9.8
+      }
+    },
+    "risks": [
+      "Export control headlines weigh on sentiment"
+    ],
+    "catalysts": [
+      "Data-center GPU demand remains robust"
+    ],
+    "edge_score": 66.7,
+    "win_probability": 80.1,
+    "expected_return": 4.9,
+    "full_memo": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n INVESTMENT MEMO \u2014 NVDA (NVIDIA Corporation)\n Generated: 2026-09-13 07:35 UTC\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\nRECOMMENDATION: BUY\nPrice: $128.4 | Edge: 66.7/100 | Win Prob: 80.1%\nExpected return: 4.9%\n\nALLOCATION\n  Target weight: 10.00%\n  Notional: $10,000.00\n  Shares: 77\n  Risk decision: APPROVE\n\nTHESIS\n  NVDA selected for deep-dive based on relative momentum, liquidity, and sector positioning.\n  Technical bias: bullish / trend=uptrend (score 79)\n  Fundamentals: undervalued / attractive (score 83)\n  News tape: neutral (score 50)\n\nSCENARIOS\n  Bull: $146.76 (14.3%)\n  Base: $129.26 (0.7%)\n  Bear: $121.53 (-5.4%)\n\nLLM NOTES\n  (rule-based memo; set ANTHROPIC_API_KEY for live narrative)\n\nKEY CATALYSTS\n  \u2022 Data-center GPU demand remains robust\n\nKEY RISKS\n  \u2022 Export control headlines weigh on sentiment\n\nANALYST CONSENSUS\n  Technical=buy | Fundamental=buy\n  News=hold | Quant=buy\n  Votes \u2192 buy:3 sell:0\n\nDISCLAIMER\n  Paper / research only. Not financial advice. Past patterns and\n  simulated scores do not guarantee future results.\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+    "trade_rejected": false,
+    "rejection_reason": "",
+    "risk_decision": "APPROVE"
+  },
+  "opportunities": [
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "price": 165.4,
+      "change_pct": 0.7,
+      "momentum_5d": -1.22,
+      "volume_ratio": 0.88,
+      "opportunity_score": 57.87,
+      "sector": "Communication Services",
+      "rank": 1
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "price": 185.6,
+      "change_pct": 1.2,
+      "momentum_5d": -2.09,
+      "volume_ratio": 0.89,
+      "opportunity_score": 49.66,
+      "sector": "Consumer Cyclical",
+      "rank": 2
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "price": 128.4,
+      "change_pct": 3.1,
+      "momentum_5d": -1.4,
+      "volume_ratio": 1.12,
+      "opportunity_score": 48.8,
+      "sector": "Technology",
+      "rank": 3
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "price": 248.5,
+      "change_pct": 2.35,
+      "momentum_5d": -0.72,
+      "volume_ratio": 1.19,
+      "opportunity_score": 46.75,
+      "sector": "Consumer Cyclical",
+      "rank": 4
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "price": 560.1,
+      "change_pct": 1.55,
+      "momentum_5d": -9.14,
+      "volume_ratio": 0.86,
+      "opportunity_score": 46.72,
+      "sector": "Communication Services",
+      "rank": 5
+    }
+  ],
+  "scan_ranking": [],
+  "example_id": "nvda",
+  "example_title": "Example B \u2014 NVDA abbreviated agent gallery",
+  "example_blurb": "Same 7-agent floor on NVIDIA: bullish technicals + fundamentals, Risk APPROVE, Portfolio BUY memo."
+}

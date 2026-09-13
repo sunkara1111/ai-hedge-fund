@@ -8,6 +8,12 @@ const AGENTS = [
   { id: "portfolio", num: "07", name: "Portfolio Manager", icon: "📋" },
 ];
 
+const SAMPLE_FILES = {
+  tsla: "./sample-analysis.json",
+  nvda: "./sample-nvda.json",
+  reject: "./sample-reject.json",
+};
+
 const els = {
   stack: document.getElementById("agent-stack"),
   status: document.getElementById("status-line"),
@@ -29,7 +35,12 @@ const els = {
   mCatalysts: document.getElementById("m-catalysts"),
   mRisks: document.getElementById("m-risks"),
   mFull: document.getElementById("m-full"),
+  examplesGrid: document.getElementById("examples-grid"),
+  demoBannerDetail: document.getElementById("demo-banner-detail"),
 };
+
+let activeExampleId = "tsla";
+let galleryMeta = [];
 
 function agentCardHtml(meta, agent) {
   const status = agent.status || "pending";
@@ -110,14 +121,16 @@ function renderMemo(data) {
   const quote = data.quote || {};
   const ticker = data.ticker || "—";
   const rec = memo.recommendation || "—";
+  const rejected = Boolean(memo.trade_rejected) || /REJECT|PASS \(RISK/i.test(rec);
 
   els.memoHero.classList.add("filled");
+  els.memoHero.classList.toggle("rejected", rejected);
   els.memoHero.innerHTML = `
     <div>
       <p class="ticker-lg">${escapeHtml(ticker)}</p>
       <p class="quote-line">${escapeHtml(quote.name || "")} · $${quote.price ?? "—"} · ${quote.change_pct ?? "—"}%</p>
     </div>
-    <div class="rec-badge">${escapeHtml(rec)}</div>
+    <div class="rec-badge ${toneClass(rec)}">${escapeHtml(rec)}</div>
   `;
 
   els.memoGrid.hidden = false;
@@ -134,9 +147,14 @@ function renderMemo(data) {
   els.mExp.textContent = memo.expected_return != null ? `${memo.expected_return}%` : "—";
   els.mExp.className = Number(memo.expected_return) >= 0 ? "bull" : Number(memo.expected_return) < 0 ? "bear" : "";
 
-  if (memo.thesis) {
+  if (memo.thesis || memo.rejection_reason) {
     els.blockThesis.hidden = false;
-    els.mThesis.textContent = memo.thesis;
+    const bits = [];
+    if (memo.rejection_reason) {
+      bits.push(`Risk rejection: ${memo.rejection_reason}`);
+    }
+    if (memo.thesis) bits.push(memo.thesis);
+    els.mThesis.textContent = bits.join("\n\n");
   } else {
     els.blockThesis.hidden = true;
   }
@@ -185,18 +203,88 @@ function renderMemo(data) {
   }
 }
 
-async function loadSample() {
-  els.status.textContent = "Loading bundled sample analysis…";
+function exampleCardHtml(ex, active) {
+  const chips = (ex.chips || [])
+    .map(
+      (c) =>
+        `<span class="ex-chip ${c.tone || "neutral"}"><em>${escapeHtml(c.agent)}</em>${escapeHtml(c.label)}</span>`
+    )
+    .join("");
+  return `
+    <button type="button" class="example-card ${active ? "active" : ""} tone-${ex.tone || "neutral"}" data-example="${escapeHtml(ex.id)}" aria-pressed="${active ? "true" : "false"}">
+      <div class="example-top">
+        <span class="example-letter">${escapeHtml((ex.title || "").split("—")[0].trim() || "Sample")}</span>
+        <span class="bias-badge ${ex.tone || "neutral"}">${escapeHtml(ex.badge || "—")}</span>
+      </div>
+      <h3><span class="ex-ticker">${escapeHtml(ex.ticker)}</span> <span class="ex-name">${escapeHtml(ex.name || "")}</span></h3>
+      <p class="example-summary">${escapeHtml(ex.summary || "")}</p>
+      <div class="ex-chips" aria-label="Agent verdicts">${chips}</div>
+      <div class="memo-callout ${ex.tone || "neutral"}">${escapeHtml(ex.memo_callout || "")}</div>
+    </button>
+  `;
+}
+
+function renderGallery(examples) {
+  if (!els.examplesGrid) return;
+  galleryMeta = examples || [];
+  els.examplesGrid.innerHTML = galleryMeta
+    .map((ex) => exampleCardHtml(ex, ex.id === activeExampleId))
+    .join("");
+  els.examplesGrid.querySelectorAll(".example-card").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-example");
+      if (id) loadSample(id, { scroll: true });
+    });
+  });
+}
+
+function setActiveCard(id) {
+  if (!els.examplesGrid) return;
+  els.examplesGrid.querySelectorAll(".example-card").forEach((btn) => {
+    const on = btn.getAttribute("data-example") === id;
+    btn.classList.toggle("active", on);
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+}
+
+async function loadGallery() {
+  if (!els.examplesGrid) return;
+  try {
+    const res = await fetch("./sample-examples.json", { cache: "no-cache" });
+    if (!res.ok) throw new Error("Could not load sample-examples.json");
+    const data = await res.json();
+    renderGallery(data.examples || []);
+  } catch (err) {
+    els.examplesGrid.innerHTML = `<p class="muted">Sample gallery unavailable: ${escapeHtml(err.message)}</p>`;
+  }
+}
+
+async function loadSample(exampleId = "tsla", opts = {}) {
+  const id = SAMPLE_FILES[exampleId] ? exampleId : "tsla";
+  activeExampleId = id;
+  setActiveCard(id);
+  const file = SAMPLE_FILES[id];
+  const meta = galleryMeta.find((e) => e.id === id);
+  els.status.textContent = `Loading ${meta ? meta.ticker : id} sample…`;
+  if (els.demoBannerDetail) {
+    els.demoBannerDetail.textContent = meta
+      ? `${meta.title}. ${meta.summary}`
+      : "Bundled demo sample — not live data.";
+  }
   renderSkeleton("running");
   try {
-    const res = await fetch("./sample-analysis.json", { cache: "no-cache" });
-    if (!res.ok) throw new Error("Could not load sample-analysis.json");
+    const res = await fetch(file, { cache: "no-cache" });
+    if (!res.ok) throw new Error(`Could not load ${file}`);
     const data = await res.json();
     renderAgents(data.agents);
     renderMemo(data);
     els.modePill.textContent = "SAMPLE DEMO";
     els.modePill.dataset.mode = "SAMPLE DEMO";
-    els.status.textContent = `Sample analysis — ${data.ticker} · bundled demo data, not live`;
+    const title = data.example_title || (meta && meta.title) || `Sample — ${data.ticker}`;
+    els.status.textContent = `${title} · bundled demo data, not live`;
+    if (opts.scroll) {
+      document.getElementById("demo")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   } catch (err) {
     els.status.textContent = `Error: ${err.message}`;
     els.modePill.textContent = "ERROR";
@@ -214,14 +302,14 @@ function showToast(msg) {
   setTimeout(() => t.remove(), 2200);
 }
 
-document.getElementById("cta-demo")?.addEventListener("click", (event) => {
-  event.preventDefault();
-  document.getElementById("demo")?.scrollIntoView({ behavior: "smooth", block: "start" });
-});
-document.getElementById("cta-load")?.addEventListener("click", (event) => {
-  event.preventDefault();
-  document.getElementById("demo")?.scrollIntoView({ behavior: "smooth", block: "start" });
-});
+function bindCtas() {
+  const scrollToExamples = (event) => {
+    event.preventDefault();
+    document.getElementById("examples")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  document.getElementById("cta-demo")?.addEventListener("click", scrollToExamples);
+  document.getElementById("cta-load")?.addEventListener("click", scrollToExamples);
+}
 
 document.getElementById("btn-copy-share")?.addEventListener("click", async () => {
   const text = document.getElementById("share-text")?.textContent?.trim() || "";
@@ -233,5 +321,6 @@ document.getElementById("btn-copy-share")?.addEventListener("click", async () =>
   }
 });
 
+bindCtas();
 renderSkeleton("pending");
-loadSample();
+loadGallery().then(() => loadSample("tsla"));

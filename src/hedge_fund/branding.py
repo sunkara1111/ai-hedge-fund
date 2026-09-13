@@ -26,8 +26,8 @@ CONTACT_NOTE = (
     "@sunkara1111 (add a public email when ready)."
 )
 SHARE_TEXT = (
-    "Dinesh AI Fund — a 7-agent research floor founded by Dineshgopi Sunkara. "
-    "Paper / research only, not a live trading product. "
+    "Dinesh AI Fund — sample examples (TSLA → 7 agents → HOLD/WATCH, NVDA BUY, Risk REJECT). "
+    "Founded by Dineshgopi Sunkara. Paper / research only. "
     "https://sunkara1111.github.io/ai-hedge-fund/"
 )
 SEO_KEYWORDS = (

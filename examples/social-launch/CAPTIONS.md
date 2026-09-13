@@ -45,3 +45,11 @@ Dinesh AI Fund is an open 7-agent investment research showcase founded by Dinesh
 Demo sample included. No live trading. No real-money handling.
 
 https://sunkara1111.github.io/ai-hedge-fund/
+
+## Sample examples on the public site
+
+- Example A: **TSLA** — 7 agents → HOLD/WATCH memo
+- Example B: **NVDA** — abbreviated agent gallery → BUY
+- Example C: **RIVN** — Risk Manager **REJECT** (capital protection)
+
+Paper / research only. Not financial advice. Founded by Dineshgopi Sunkara.

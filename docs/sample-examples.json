@@ -1,0 +1,148 @@
+{
+  "examples": [
+    {
+      "id": "tsla",
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "file": "sample-analysis.json",
+      "badge": "HOLD / WATCH",
+      "tone": "neutral",
+      "title": "Example A \u2014 Full walkthrough",
+      "summary": "7 agents \u2192 Combined Result memo. Risk APPROVE \u00b7 Portfolio HOLD/WATCH.",
+      "chips": [
+        {
+          "agent": "Scout",
+          "label": "scouted",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Tech",
+          "label": "HOLD",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Fund",
+          "label": "BUY",
+          "tone": "bull"
+        },
+        {
+          "agent": "News",
+          "label": "BULLISH",
+          "tone": "bull"
+        },
+        {
+          "agent": "Quant",
+          "label": "EDGE 56",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Risk",
+          "label": "APPROVE",
+          "tone": "bull"
+        },
+        {
+          "agent": "PM",
+          "label": "HOLD / WATCH",
+          "tone": "neutral"
+        }
+      ],
+      "memo_callout": "HOLD / WATCH \u00b7 ~5.8% paper alloc \u00b7 edge 56.4"
+    },
+    {
+      "id": "nvda",
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "file": "sample-nvda.json",
+      "badge": "BUY",
+      "tone": "bull",
+      "title": "Example B \u2014 Product gallery card",
+      "summary": "Abbreviated agent cards for a second ticker so the site feels like a real gallery.",
+      "chips": [
+        {
+          "agent": "Scout",
+          "label": "scouted",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Tech",
+          "label": "BUY",
+          "tone": "bull"
+        },
+        {
+          "agent": "Fund",
+          "label": "BUY",
+          "tone": "bull"
+        },
+        {
+          "agent": "News",
+          "label": "NEUTRAL",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Quant",
+          "label": "EDGE 67",
+          "tone": "bull"
+        },
+        {
+          "agent": "Risk",
+          "label": "APPROVE",
+          "tone": "bull"
+        },
+        {
+          "agent": "PM",
+          "label": "BUY",
+          "tone": "bull"
+        }
+      ],
+      "memo_callout": "BUY \u00b7 edge 66.7 \u00b7 paper research sample"
+    },
+    {
+      "id": "reject",
+      "ticker": "RIVN",
+      "name": "Rivian Automotive (demo)",
+      "file": "sample-reject.json",
+      "badge": "REJECT",
+      "tone": "bear",
+      "title": "Example C \u2014 Capital protection",
+      "summary": "Risk Manager REJECTS before capital is sized. Portfolio returns PASS (risk rejected).",
+      "chips": [
+        {
+          "agent": "Scout",
+          "label": "scouted",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Tech",
+          "label": "HOLD",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Fund",
+          "label": "BUY",
+          "tone": "bull"
+        },
+        {
+          "agent": "News",
+          "label": "NEUTRAL",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Quant",
+          "label": "EDGE 54",
+          "tone": "neutral"
+        },
+        {
+          "agent": "Risk",
+          "label": "REJECT",
+          "tone": "bear"
+        },
+        {
+          "agent": "PM",
+          "label": "PASS (RISK REJECTED)",
+          "tone": "bear"
+        }
+      ],
+      "memo_callout": "PASS (risk rejected) \u00b7 0% allocation \u00b7 technical overbought without exceptional edge"
+    }
+  ]
+}

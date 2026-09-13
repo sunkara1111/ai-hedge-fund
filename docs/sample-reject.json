@@ -1,0 +1,227 @@
+{
+  "ok": true,
+  "mode": "analyze",
+  "ticker": "RIVN",
+  "demo": true,
+  "portfolio_value": 100000.0,
+  "quote": {
+    "symbol": "RIVN",
+    "name": "Rivian Automotive (demo sample)",
+    "price": 100.0,
+    "change_pct": 0.5,
+    "volume": 10000000,
+    "avg_volume": 10000000,
+    "market_cap": 50000000000,
+    "sector": "Unknown",
+    "industry": "Unknown",
+    "pe_ratio": 20.0,
+    "forward_pe": 18.0,
+    "pb_ratio": 3.0,
+    "ps_ratio": 2.5,
+    "eps": 5.0,
+    "revenue_growth": 0.08,
+    "profit_margin": 0.12,
+    "debt_to_equity": 0.5,
+    "roe": 0.15,
+    "beta": 1.0,
+    "52w_high": 120.0,
+    "52w_low": 80.0,
+    "dividend_yield": 0.01
+  },
+  "agents": [
+    {
+      "id": "market_scout",
+      "num": "01",
+      "name": "Market Scout",
+      "icon": "\ud83d\udd2d",
+      "status": "done",
+      "verdict": {
+        "label": "scouted",
+        "score": null,
+        "detail": "$100.0 \u00b7 0.5%",
+        "tone": "neutral"
+      },
+      "rationale": "Market Scout scanned 7 names.\nFocus ticker: RIVN (RIVN Corp (demo)) @ $100.0\nDay change: 0.5% | Sector: Unknown\nTop opportunities:\n  #1 GOOGL: score=57.87 (0.7% / mom5d=-1.22%)\n  #2 AMZN: score=49.66 (1.2% / mom5d=-2.09%)\n  #3 NVDA: score=48.8 (3.1% / mom5d=-1.4%)\n  #4 TSLA: score=46.75 (2.35% / mom5d=-0.72%)"
+    },
+    {
+      "id": "technical",
+      "num": "02",
+      "name": "Technical Analyst",
+      "icon": "\ud83d\udcc8",
+      "status": "done",
+      "verdict": {
+        "label": "HOLD",
+        "score": 45,
+        "detail": "overbought \u00b7 sideways",
+        "tone": "neutral"
+      },
+      "rationale": "Technical Analysis \u2014 RIVN\n  Price: $109.0\n  RSI(14): 100.0 \u2192 overbought\n  MACD: 0.0 | signal=0.0 | hist=0.0\n  SMA20: 99.5 | SMA50: 99.5 | EMA12: 103.73\n  Trend: sideways | Bias: overbought\n  Signal balance: 2 bullish / 2 bearish\n  Technical score: 45/100"
+    },
+    {
+      "id": "fundamental",
+      "num": "03",
+      "name": "Fundamental Analyst",
+      "icon": "\ud83d\udcca",
+      "status": "done",
+      "verdict": {
+        "label": "BUY",
+        "score": 68,
+        "detail": "fairly valued",
+        "tone": "bull"
+      },
+      "rationale": "Fundamental Analysis \u2014 RIVN (RIVN Corp (demo))\n  Sector/Industry: Unknown / Unknown\n  Price: $100.0 | Market Cap: $50.0B\n  P/E: 20.00 | Forward P/E: 18.00\n  P/B: 3.00 | P/S: 2.50\n  EPS: 5.00 | ROE: 15.0%\n  Revenue growth: 8.0% | Profit margin: 12.0%\n  Debt/Equity: 0.50 | Beta: 1.00"
+    },
+    {
+      "id": "news",
+      "num": "04",
+      "name": "News Analyst",
+      "icon": "\ud83d\udcf0",
+      "status": "done",
+      "verdict": {
+        "label": "NEUTRAL",
+        "score": 50,
+        "detail": "1 headlines",
+        "tone": "neutral"
+      },
+      "rationale": "News & Catalyst Analysis \u2014 RIVN\n  Aggregate sentiment: neutral (score=0.0)\n  Breakdown: +0 / -0 / ~1\n  Headlines:\n    [NEUTRAL] RIVN in focus as markets digest macro data \u2014 DemoWire\n      No major company-specific catalysts in demo feed."
+    },
+    {
+      "id": "quant",
+      "num": "05",
+      "name": "Quant Analyst",
+      "icon": "\ud83e\uddee",
+      "status": "done",
+      "verdict": {
+        "label": "EDGE 53.9",
+        "score": 53.9,
+        "detail": "Win 58.1%",
+        "tone": "neutral"
+      },
+      "rationale": "Quant Analysis \u2014 RIVN\n  Edge score: 53.9/100\n  Win probability: 58.1%\n  Expected return (scenario-weighted): 1.35%\n  Factor contributions:\n    Technical momentum: 45.0\n    Fundamental quality: 68.0\n    News sentiment: 50.0"
+    },
+    {
+      "id": "risk",
+      "num": "06",
+      "name": "Risk Manager",
+      "icon": "\ud83d\udee1\ufe0f",
+      "status": "done",
+      "verdict": {
+        "label": "REJECT",
+        "score": null,
+        "detail": "technical overbought without exceptional edge",
+        "tone": "bear"
+      },
+      "rationale": "Risk Management \u2014 RIVN\n  Decision: REJECT\n  Portfolio value: $100,000\n  Proposed size: 0.00% ($0.00 / 0 shares @ $100.0)\n  Max position cap: 10.0%\n  Est. max loss (bear): $0.00\n  Beta: 1.0\n  Stress tests:"
+    },
+    {
+      "id": "portfolio",
+      "num": "07",
+      "name": "Portfolio Manager",
+      "icon": "\ud83d\udccb",
+      "status": "done",
+      "verdict": {
+        "label": "PASS (RISK REJECTED)",
+        "score": null,
+        "detail": "0.00% alloc",
+        "tone": "bear"
+      },
+      "rationale": "Portfolio Manager skipped \u2014 trade REJECTED by Risk Manager.\nReason: technical overbought without exceptional edge"
+    }
+  ],
+  "memo": {
+    "recommendation": "PASS (risk rejected)",
+    "allocation_pct": 0.0,
+    "allocation_dollars": 0.0,
+    "shares": 0,
+    "thesis": "RIVN selected for deep-dive based on relative momentum, liquidity, and sector positioning.",
+    "scenarios": {
+      "bull": {
+        "price": 110.35,
+        "return_pct": 10.3,
+        "prob": 22.7
+      },
+      "base": {
+        "price": 100.16,
+        "return_pct": 0.2,
+        "prob": 59.1
+      },
+      "bear": {
+        "price": 93.92,
+        "return_pct": -6.1,
+        "prob": 18.2
+      }
+    },
+    "risks": [
+      "technical overbought without exceptional edge"
+    ],
+    "catalysts": [],
+    "edge_score": 53.9,
+    "win_probability": 58.1,
+    "expected_return": 1.35,
+    "full_memo": "Portfolio Manager skipped \u2014 trade REJECTED by Risk Manager.\nReason: technical overbought without exceptional edge",
+    "trade_rejected": true,
+    "rejection_reason": "technical overbought without exceptional edge",
+    "risk_decision": "REJECT"
+  },
+  "opportunities": [
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "price": 165.4,
+      "change_pct": 0.7,
+      "momentum_5d": -1.22,
+      "volume_ratio": 0.88,
+      "opportunity_score": 57.87,
+      "sector": "Communication Services",
+      "rank": 1
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "price": 185.6,
+      "change_pct": 1.2,
+      "momentum_5d": -2.09,
+      "volume_ratio": 0.89,
+      "opportunity_score": 49.66,
+      "sector": "Consumer Cyclical",
+      "rank": 2
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "price": 128.4,
+      "change_pct": 3.1,
+      "momentum_5d": -1.4,
+      "volume_ratio": 1.12,
+      "opportunity_score": 48.8,
+      "sector": "Technology",
+      "rank": 3
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "price": 248.5,
+      "change_pct": 2.35,
+      "momentum_5d": -0.72,
+      "volume_ratio": 1.19,
+      "opportunity_score": 46.75,
+      "sector": "Consumer Cyclical",
+      "rank": 4
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "price": 560.1,
+      "change_pct": 1.55,
+      "momentum_5d": -9.14,
+      "volume_ratio": 0.86,
+      "opportunity_score": 46.72,
+      "sector": "Communication Services",
+      "rank": 5
+    }
+  ],
+  "scan_ranking": [],
+  "example_id": "reject",
+  "example_title": "Example C \u2014 Risk Manager REJECTS (capital protection)",
+  "example_blurb": "Educational sample: Risk Manager returns REJECT \u00b7 Portfolio Manager ships PASS (risk rejected) with 0% allocation. Shows how the floor protects paper capital."
+}

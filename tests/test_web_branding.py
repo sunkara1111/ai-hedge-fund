@@ -100,12 +100,30 @@ def test_docs_showcase_assets_and_branding():
     html = (ROOT / "docs" / "index.html").read_text()
     assert PRODUCT_NAME in html
     assert FOUNDER_CREDIT in html
-    assert "sample-analysis.json" in html or "Sample / demo analysis" in html
+    assert "sample-analysis.json" in html or "Sample / demo analysis" in html or 'id="examples"' in html
     assert "og:image" in html
+    assert "Sample examples" in html
+    assert 'id="examples"' in html
+    assert "sample examples" in html.lower()
     sample = json.loads((ROOT / "docs" / "sample-analysis.json").read_text())
     assert sample["ticker"] == "TSLA"
     assert sample["demo"] is True
     assert len(sample["agents"]) == 7
+    nvda = json.loads((ROOT / "docs" / "sample-nvda.json").read_text())
+    assert nvda["ticker"] == "NVDA"
+    assert nvda["demo"] is True
+    assert len(nvda["agents"]) == 7
+    assert nvda["memo"]["recommendation"]
+    reject = json.loads((ROOT / "docs" / "sample-reject.json").read_text())
+    assert reject["demo"] is True
+    assert len(reject["agents"]) == 7
+    assert reject["memo"].get("trade_rejected") is True or "REJECT" in reject["memo"].get("recommendation", "").upper() or "PASS" in reject["memo"].get("recommendation", "").upper()
+    risk = next(a for a in reject["agents"] if a["id"] == "risk")
+    assert risk["verdict"]["label"] == "REJECT"
+    gallery = json.loads((ROOT / "docs" / "sample-examples.json").read_text())
+    assert len(gallery["examples"]) >= 3
+    ids = {e["id"] for e in gallery["examples"]}
+    assert {"tsla", "nvda", "reject"} <= ids
     assert (ROOT / "docs" / "og-image.png").exists()
     assert (ROOT / "docs" / "og-square.png").exists()
     assert (ROOT / "docs" / ".nojekyll").exists()
@@ -115,6 +133,7 @@ def test_docs_showcase_assets_and_branding():
     assert "Technical Analyst" in html
     assert "Dinesh AI Fund" in html
     assert "Sunkara AI Fund" not in html
+    assert "Built with Claude" not in html
     assert (ROOT / "docs" / "robots.txt").exists()
     robots = (ROOT / "docs" / "robots.txt").read_text()
     assert "Allow: /" in robots
@@ -122,12 +141,19 @@ def test_docs_showcase_assets_and_branding():
     assert (ROOT / "docs" / "sitemap.xml").exists()
     sitemap = (ROOT / "docs" / "sitemap.xml").read_text()
     assert "sunkara1111.github.io/ai-hedge-fund/" in sitemap
+    assert "sample-nvda.json" in sitemap
+    assert "sample-reject.json" in sitemap
+    assert "sample-examples.json" in sitemap
     assert "application/ld+json" in html
     assert "Dineshgopi Sunkara" in html
     assert 'id="faq"' in html or "FAQ" in html
     assert 'id="contact"' in html or "Contact" in html
     assert "SoftwareApplication" in html
     assert "Organization" in html
+    app_js = (ROOT / "docs" / "app.js").read_text()
+    assert "sample-examples.json" in app_js
+    assert "sample-nvda.json" in app_js
+    assert "sample-reject.json" in app_js
 
 
 def test_social_images_dimensions():

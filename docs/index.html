@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dinesh AI Fund by Dineshgopi Sunkara — 7-Agent Investment Research</title>
-  <meta name="description" content="Dinesh AI Fund by Dineshgopi Sunkara: a 7-agent AI investment research floor. Input a ticker → agents collaborate → get a paper investment memo. Demo included. Not live trading. Not financial advice." />
+  <meta name="description" content="Dinesh AI Fund by Dineshgopi Sunkara: a 7-agent AI investment research floor. Browse sample examples (TSLA, NVDA, Risk REJECT). Input a ticker → agents collaborate → paper memo. Not live trading. Not financial advice." />
   <meta name="author" content="Dineshgopi Sunkara" />
   <meta name="theme-color" content="#ff6b00" />
   <meta name="robots" content="index,follow" />
-  <meta name="keywords" content="Dinesh AI Fund, Dineshgopi Sunkara, AI investment research, multi-agent trading research, LangGraph, paper trading, investment memo, 7-agent research floor" />
+  <meta name="keywords" content="Dinesh AI Fund, Dineshgopi Sunkara, AI investment research, sample examples, multi-agent trading research, LangGraph, paper trading, investment memo, 7-agent research floor, Risk Manager REJECT" />
   <meta name="application-name" content="Dinesh AI Fund" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://sunkara1111.github.io/ai-hedge-fund/sitemap.xml" />
 
@@ -50,7 +50,7 @@
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Any",
         "url": "https://sunkara1111.github.io/ai-hedge-fund/",
-        "description": "Dinesh AI Fund is a 7-agent investment research floor founded by Dineshgopi Sunkara. Paper / research only — not a live trading product and not financial advice.",
+        "description": "Dinesh AI Fund is a 7-agent investment research floor founded by Dineshgopi Sunkara. Public sample examples (TSLA, NVDA, Risk REJECT) show how agents produce a paper memo. Not a live trading product and not financial advice.",
         "author": {
           "@id": "https://sunkara1111.github.io/ai-hedge-fund/#founder"
         },
@@ -69,7 +69,7 @@
         "@id": "https://sunkara1111.github.io/ai-hedge-fund/#website",
         "url": "https://sunkara1111.github.io/ai-hedge-fund/",
         "name": "Dinesh AI Fund",
-        "description": "7-agent investment research floor founded by Dineshgopi Sunkara.",
+        "description": "7-agent investment research floor founded by Dineshgopi Sunkara — with concrete sample examples on the public site.",
         "publisher": {
           "@id": "https://sunkara1111.github.io/ai-hedge-fund/#organization"
         },
@@ -105,6 +105,14 @@
           },
           {
             "@type": "Question",
+            "name": "What sample examples are on the site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The public site includes concrete sample examples: TSLA full 7-agent walkthrough with a HOLD/WATCH memo, NVDA abbreviated agent gallery with a BUY memo, and a Risk Manager REJECT example that shows capital protection. All samples use bundled demo data — paper / research only."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "How can buyers or partners contact the founder?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -123,18 +131,18 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dinesh AI Fund" />
   <meta property="og:title" content="Dinesh AI Fund by Dineshgopi Sunkara — 7-Agent Investment Research" />
-  <meta property="og:description" content="Founded by Dineshgopi Sunkara. Seven specialized agents collaborate on paper-research memos. Not a live trading product and not financial advice." />
+  <meta property="og:description" content="Founded by Dineshgopi Sunkara. Sample examples: TSLA HOLD/WATCH, NVDA BUY, Risk REJECT. Seven agents, paper memos only — not financial advice." />
   <meta property="og:url" content="https://sunkara1111.github.io/ai-hedge-fund/" />
   <meta property="og:image" content="https://sunkara1111.github.io/ai-hedge-fund/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Dinesh AI Fund — 7-agent research floor. Founded by Dineshgopi Sunkara." />
+  <meta property="og:image:alt" content="Dinesh AI Fund — Sample: TSLA → 7 agents → HOLD/WATCH memo. Founded by Dineshgopi Sunkara." />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dinesh AI Fund by Dineshgopi Sunkara — 7-Agent Investment Research" />
-  <meta name="twitter:description" content="Founded by Dineshgopi Sunkara. Seven specialized agents for paper investment research. Not financial advice." />
+  <meta name="twitter:description" content="Founded by Dineshgopi Sunkara. Sample examples show 7 agents → memo (TSLA, NVDA, REJECT). Paper research only — not financial advice." />
   <meta name="twitter:image" content="https://sunkara1111.github.io/ai-hedge-fund/og-image.png" />
-  <meta name="twitter:image:alt" content="Dinesh AI Fund — 7-agent research floor. Founded by Dineshgopi Sunkara." />
+  <meta name="twitter:image:alt" content="Dinesh AI Fund — Sample: TSLA → 7 agents → HOLD/WATCH memo. Founded by Dineshgopi Sunkara." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -152,7 +160,8 @@
       </div>
     </div>
     <nav class="nav" aria-label="Primary">
-      <a href="#demo">Sample analysis</a>
+      <a href="#examples">Sample examples</a>
+      <a href="#demo">Deep dive</a>
       <a href="#how">How it works</a>
       <a href="#agents">Agents</a>
       <a href="#faq">FAQ</a>
@@ -161,7 +170,7 @@
       <a href="https://github.com/sunkara1111/ai-hedge-fund" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
     <div class="controls">
-      <a class="btn btn-primary" href="#demo" id="cta-load">View sample</a>
+      <a class="btn btn-primary" href="#examples" id="cta-load">View samples</a>
       <a class="btn btn-ghost" href="https://github.com/sunkara1111/ai-hedge-fund" target="_blank" rel="noopener noreferrer">Inspect GitHub</a>
     </div>
   </header>
@@ -171,13 +180,23 @@
     <h1>Dinesh AI Fund — seven agents. One research memo. Zero live trading.</h1>
     <p class="lede">Dinesh AI Fund is a multi-agent investment research floor. Specialized agents scout opportunities, read technicals, fundamentals, and news, score edge, enforce risk limits, and write a paper memo. Founded by Dineshgopi Sunkara.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#demo" id="cta-demo">View sample analysis</a>
+      <a class="btn btn-primary" href="#examples" id="cta-demo">Browse sample examples</a>
       <a class="btn btn-ghost" href="#contact">Contact founder</a>
       <a class="btn btn-ghost" href="https://github.com/sunkara1111/ai-hedge-fund" target="_blank" rel="noopener noreferrer">Inspect GitHub</a>
     </div>
-    <p class="hero-note">This public page is a static showcase. It does not call a live backend or handle real money. The TSLA walkthrough below is bundled demo data from the open-source pipeline.</p>
+    <p class="hero-note">This public page is a static showcase. It does not call a live backend or handle real money. Sample examples below (TSLA, NVDA, Risk REJECT) use bundled demo data from the open-source pipeline.</p>
   </section>
 
+  <section class="examples" id="examples">
+    <div class="section-head">
+      <h2>Sample examples</h2>
+      <p class="muted">Concrete walkthroughs so visitors instantly see what Dinesh AI Fund does — agent chips, bias badges, and the final memo callout. Paper / research only.</p>
+    </div>
+    <div class="examples-grid" id="examples-grid" aria-label="Sample example gallery">
+      <!-- filled by app.js from sample-examples.json -->
+    </div>
+    <p class="examples-note">Click a card to load that sample into the deep-dive agent cards and Combined Result memo below. Scores are simulated demo outputs — not live market advice.</p>
+  </section>
 
   <section class="how" id="how">
     <div class="section-head">
@@ -231,15 +250,15 @@
   </section>
 
   <div class="sample-banner" id="demo-banner">
-    <strong>Sample analysis — TSLA walkthrough (not live data).</strong>
-    Below: each agent’s output card plus the Combined Result / Final memo from the bundled <code>sample-analysis.json</code>. Run the FastAPI dashboard from GitHub to try other tickers on your machine.
+    <strong>Deep dive — active sample (not live data).</strong>
+    <span id="demo-banner-detail">Select TSLA, NVDA, or Risk REJECT above. Below: each agent’s output card plus the Combined Result / Final memo from bundled sample JSON.</span>
   </div>
 
   <main class="layout showcase" id="demo">
     <section class="floor">
       <div class="section-head">
-        <h2>Example: agent output cards</h2>
-        <p id="status-line" class="muted">Loading bundled TSLA sample analysis…</p>
+        <h2>Agent output cards</h2>
+        <p id="status-line" class="muted">Loading bundled sample analysis…</p>
       </div>
       <div class="agent-stack" id="agent-stack"></div>
     </section>
@@ -334,6 +353,10 @@
         <summary>What do the 7 agents actually do?</summary>
         <p>01 Market Scout ranks opportunities · 02 Technical Analyst reads charts · 03 Fundamental Analyst checks financials · 04 News Analyst weighs headlines · 05 Quant Analyst scores edge · 06 Risk Manager can REJECT · 07 Portfolio Manager writes the final memo.</p>
       </details>
+      <details class="faq-item">
+        <summary>What sample examples can I browse?</summary>
+        <p><strong>Example A — TSLA:</strong> full 7-agent walkthrough ending in HOLD/WATCH. <strong>Example B — NVDA:</strong> abbreviated gallery with a BUY memo. <strong>Example C — RIVN:</strong> Risk Manager REJECTS to show capital protection. All bundled demo data.</p>
+      </details>
     </div>
   </section>
 
@@ -345,7 +368,7 @@
       <div class="contact-actions">
         <a class="btn btn-primary" href="https://github.com/sunkara1111" target="_blank" rel="noopener noreferrer">Contact on GitHub @sunkara1111</a>
         <a class="btn btn-ghost" href="https://github.com/sunkara1111/ai-hedge-fund" target="_blank" rel="noopener noreferrer">Star / inspect the repo</a>
-        <a class="btn btn-ghost" href="#demo">See the TSLA sample first</a>
+        <a class="btn btn-ghost" href="#examples">See sample examples first</a>
       </div>
       <p class="contact-trust">Trust notes: paper / research only · no AUM or return claims · no fake customers · MIT open source.</p>
     </div>
@@ -359,7 +382,7 @@
         <p>Founded by Dineshgopi Sunkara</p>
       </div>
     </div>
-    <p class="share-line" id="share-text">Dinesh AI Fund — a 7-agent research floor founded by Dineshgopi Sunkara. Paper / research only, not a live trading product. https://sunkara1111.github.io/ai-hedge-fund/</p>
+    <p class="share-line" id="share-text">Dinesh AI Fund — sample examples (TSLA → 7 agents → HOLD/WATCH, NVDA BUY, Risk REJECT). Founded by Dineshgopi Sunkara. Paper / research only. https://sunkara1111.github.io/ai-hedge-fund/</p>
     <div class="footer-actions">
       <button type="button" class="btn btn-ghost" id="btn-copy-share">Copy share text</button>
       <a class="btn btn-ghost" href="#contact">Contact founder</a>
