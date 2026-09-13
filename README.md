@@ -90,6 +90,9 @@ ai-hedge-fund/
     llm.py            # optional Anthropic enrichment (skipped in --demo)
     agents/           # 7 agents
     tools/            # market_data, indicators, news
+    web/
+      app.py          # FastAPI + /api/analyze + /api/scan
+      static/         # polished single-page dashboard
   examples/sample_output.md
   tests/test_graph_smoke.py
 ```
@@ -100,6 +103,35 @@ ai-hedge-fund/
 pip install -e ".[dev]"
 pytest -q
 ```
+
+
+## Web dashboard
+
+A local product-style UI (cream background, orange accents, 7 agent “floors”, final memo panel) wired to the same LangGraph pipeline.
+
+```bash
+# install / refresh deps (includes fastapi + uvicorn)
+pip install -e .
+
+# start the dashboard
+uvicorn hedge_fund.web.app:app --reload --port 8000
+```
+
+Open [http://localhost:8000](http://localhost:8000). Use the **Demo** toggle (or `?demo=1`) to run without `ANTHROPIC_API_KEY`.
+
+API:
+
+- `POST /api/analyze` — body `{ "ticker": "TSLA", "demo": true }`
+- `POST /api/scan` — body `{ "demo": true }`
+- `GET /` — dashboard UI
+
+```bash
+curl -s -X POST http://localhost:8000/api/analyze \
+  -H 'Content-Type: application/json' \
+  -d '{"ticker":"TSLA","demo":true}' | python -m json.tool | head
+```
+
+> Screenshot note: open the dashboard after a demo analyze — agent cards 01–07 update on the left, investment memo on the right.
 
 ## License
 

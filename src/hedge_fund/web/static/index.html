@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Hedge Fund — Trading Floor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">AH</div>
+      <div class="brand-text">
+        <strong>AI Hedge Fund</strong>
+        <span>7-agent trading floor</span>
+      </div>
+    </div>
+    <form class="controls" id="analyze-form">
+      <label class="field ticker-field">
+        <span>Ticker</span>
+        <input id="ticker" name="ticker" type="text" maxlength="12" placeholder="TSLA" value="TSLA" autocomplete="off" />
+      </label>
+      <label class="demo-toggle" title="Run without ANTHROPIC_API_KEY">
+        <input type="checkbox" id="demo" checked />
+        <span class="switch"></span>
+        <span class="demo-label">Demo</span>
+      </label>
+      <button type="submit" class="btn btn-primary" id="btn-analyze">Analyze</button>
+      <button type="button" class="btn btn-ghost" id="btn-scan">Scan</button>
+    </form>
+  </header>
+
+  <main class="layout">
+    <section class="floor">
+      <div class="section-head">
+        <h2>Agent Floors</h2>
+        <p id="status-line" class="muted">Enter a ticker and run analysis — or scan the demo universe.</p>
+      </div>
+      <div class="agent-stack" id="agent-stack">
+        <!-- cards injected -->
+      </div>
+    </section>
+
+    <aside class="memo-panel">
+      <div class="section-head">
+        <h2>Final Investment Memo</h2>
+        <span class="pill" id="mode-pill">IDLE</span>
+      </div>
+
+      <div class="memo-hero" id="memo-hero">
+        <div class="memo-empty">
+          <div class="memo-empty-icon">◇</div>
+          <p>Combined result appears here after the pipeline finishes.</p>
+        </div>
+      </div>
+
+      <div class="memo-grid" id="memo-grid" hidden>
+        <div class="stat-card">
+          <span class="stat-label">Recommendation</span>
+          <strong id="m-rec">—</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Allocation</span>
+          <strong id="m-alloc">—</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Edge / Win</span>
+          <strong id="m-edge">—</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Expected</span>
+          <strong id="m-exp">—</strong>
+        </div>
+      </div>
+
+      <div class="memo-block" id="block-thesis" hidden>
+        <h3>Thesis</h3>
+        <p id="m-thesis"></p>
+      </div>
+
+      <div class="memo-block" id="block-scenarios" hidden>
+        <h3>Scenarios</h3>
+        <div class="scenario-row" id="m-scenarios"></div>
+      </div>
+
+      <div class="memo-split" id="block-lists" hidden>
+        <div class="memo-block">
+          <h3>Catalysts</h3>
+          <ul id="m-catalysts"></ul>
+        </div>
+        <div class="memo-block">
+          <h3>Risks</h3>
+          <ul id="m-risks"></ul>
+        </div>
+      </div>
+
+      <div class="memo-block" id="block-full" hidden>
+        <h3>Full Memo</h3>
+        <pre id="m-full" class="memo-pre"></pre>
+      </div>
+
+      <div class="scan-block" id="scan-block" hidden>
+        <h3>Universe Scan</h3>
+        <div class="scan-list" id="scan-list"></div>
+      </div>
+
+      <p class="disclaimer">Paper / research only. Not financial advice.</p>
+    </aside>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
