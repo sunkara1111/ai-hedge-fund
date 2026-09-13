@@ -1,9 +1,9 @@
 const AGENTS = [
   { id: "market_scout", num: "01", name: "Market Scout", icon: "🔭" },
-  { id: "technical", num: "02", name: "Technical", icon: "📈" },
-  { id: "fundamental", num: "03", name: "Fundamental", icon: "📊" },
-  { id: "news", num: "04", name: "News", icon: "📰" },
-  { id: "quant", num: "05", name: "Quant", icon: "🧮" },
+  { id: "technical", num: "02", name: "Technical Analyst", icon: "📈" },
+  { id: "fundamental", num: "03", name: "Fundamental Analyst", icon: "📊" },
+  { id: "news", num: "04", name: "News Analyst", icon: "📰" },
+  { id: "quant", num: "05", name: "Quant Analyst", icon: "🧮" },
   { id: "risk", num: "06", name: "Risk Manager", icon: "🛡️" },
   { id: "portfolio", num: "07", name: "Portfolio Manager", icon: "📋" },
 ];

@@ -1,4 +1,4 @@
-# Sunkara AI Fund
+# Dinesh AI Fund
 
 **Founded by Dineshgopi Sunkara**
 
@@ -142,7 +142,11 @@ The GitHub Pages site at [https://sunkara1111.github.io/ai-hedge-fund/](https://
 
 Share text:
 
-> Sunkara AI Fund — a 7-agent research floor founded by Dineshgopi Sunkara. Paper / research only, not a live trading product. https://sunkara1111.github.io/ai-hedge-fund/
+> Dinesh AI Fund — a 7-agent research floor founded by Dineshgopi Sunkara. Paper / research only, not a live trading product. https://sunkara1111.github.io/ai-hedge-fund/
+
+## Contact
+
+Interested buyers or partners can reach founder **Dineshgopi Sunkara** via GitHub: [github.com/sunkara1111](https://github.com/sunkara1111). No public product email is published yet — add one here when ready.
 
 ## License
 

@@ -2,7 +2,7 @@
 
 ```
 ╭────────────────────────────────────────────╮
-│ Sunkara AI Fund — Analysis Report          │
+│ Dinesh AI Fund — Analysis Report          │
 │ Founded by Dineshgopi Sunkara              │
 │ Ticker: TSLA  |  Mode: DEMO (mock data…)   │
 ╰────────────────────────────────────────────╯

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ai-hedge-fund"
-version = "1.2.0"
-description = "Sunkara AI Fund — 7-agent investment research floor founded by Dineshgopi Sunkara"
+version = "1.3.0"
+description = "Dinesh AI Fund — 7-agent investment research floor founded by Dineshgopi Sunkara"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}

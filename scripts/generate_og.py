@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate social preview images for Sunkara AI Fund."""
+"""Regenerate social preview images for Dinesh AI Fund."""
 
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ ORANGE = (255, 107, 0, 255)
 WHITE = (255, 255, 255, 255)
 CHIP_BG = (58, 36, 20, 255)
 MUTED = (232, 210, 188, 255)
-AGENTS = ["01 Scout", "02 Technical", "03 Fundamental", "04 News", "05 Quant", "06 Risk", "07 Portfolio"]
+AGENTS = ["01 Market Scout", "02 Technical", "03 Fundamental", "04 News", "05 Quant", "06 Risk", "07 Portfolio"]
 
 
 def fnt(path: str, size: int):
@@ -48,7 +48,7 @@ def paint_dark(img, w, h):
 def draw_mark(draw, x, y, size):
     draw.rounded_rectangle((x, y, x + size, y + size), radius=int(size * 0.22), fill=ORANGE)
     f = fnt(OUTFIT, int(size * 0.44))
-    text = "SA"
+    text = "DA"
     bbox = draw.textbbox((0, 0), text, font=f)
     tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
     draw.text((x + (size - tw) / 2 - bbox[0], y + (size - th) / 2 - bbox[1] - size * 0.03), text, font=f, fill=WHITE)
@@ -99,7 +99,7 @@ def make_landscape(path: Path):
     mark = 120
     draw_mark(d, 96, 92, mark)
     d.text((96 + mark + 32, 108), "SEVEN-AGENT RESEARCH FLOOR", font=fnt(INTER, 28), fill=ORANGE)
-    d.text((96 + mark + 32, 150), "Sunkara AI Fund", font=fnt(OUTFIT, 96), fill=CREAM)
+    d.text((96 + mark + 32, 150), "Dinesh AI Fund", font=fnt(OUTFIT, 96), fill=CREAM)
     d.text((96, 300), "Open, educational investment research — paper only, never live trading.", font=fnt(INTER, 36), fill=MUTED)
     draw_chips(d, AGENTS, 390, w, fnt(INTER, 28), pad_x=24, pad_y=14)
     d.text((96, 520), "Founded by Dineshgopi Sunkara", font=fnt(OUTFIT, 40), fill=CREAM)
@@ -118,7 +118,7 @@ def make_square(path: Path):
     text = "SEVEN-AGENT RESEARCH FLOOR"
     tw, th, b = measure(d, text, fnt(INTER, 30))
     d.text(((w - tw) / 2 - b[0], 380), text, font=fnt(INTER, 30), fill=ORANGE)
-    text = "Sunkara AI Fund"
+    text = "Dinesh AI Fund"
     tw, th, b = measure(d, text, fnt(OUTFIT, 92))
     d.text(((w - tw) / 2 - b[0], 430), text, font=fnt(OUTFIT, 92), fill=CREAM)
     text = "Paper research only  ·  Not live trading"
@@ -141,7 +141,7 @@ def make_icon(path: Path, size: int):
     d = ImageDraw.Draw(img, "RGBA")
     d.rounded_rectangle((0, 0, s, s), radius=int(s * 0.22), fill=ORANGE)
     f = fnt(OUTFIT, int(s * 0.44))
-    text = "SA"
+    text = "DA"
     b = d.textbbox((0, 0), text, font=f)
     tw, th = b[2] - b[0], b[3] - b[1]
     d.text(((s - tw) / 2 - b[0], (s - th) / 2 - b[1] - s * 0.03), text, font=f, fill=WHITE)

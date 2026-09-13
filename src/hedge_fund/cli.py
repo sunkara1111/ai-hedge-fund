@@ -1,4 +1,4 @@
-"""CLI entrypoint for Sunkara AI Fund."""
+"""CLI entrypoint for Dinesh AI Fund."""
 
 from __future__ import annotations
 
@@ -121,7 +121,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="hedge_fund",
-        description="Sunkara AI Fund — 7-agent paper-research assistant (not live trading)",
+        description="Dinesh AI Fund — 7-agent paper-research assistant (not live trading)",
     )
     sub = p.add_subparsers(dest="command", required=True)
 

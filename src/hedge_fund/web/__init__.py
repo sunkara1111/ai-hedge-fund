@@ -1,1 +1,1 @@
-"""Web dashboard for Sunkara AI Fund."""
+"""Web dashboard for Dinesh AI Fund."""

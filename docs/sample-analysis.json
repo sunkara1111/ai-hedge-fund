@@ -155,7 +155,7 @@
     {
       "id": "technical",
       "num": "02",
-      "name": "Technical",
+      "name": "Technical Analyst",
       "section": "2. Technical Analyst",
       "icon": "\ud83d\udcc8",
       "status": "done",
@@ -190,7 +190,7 @@
     {
       "id": "fundamental",
       "num": "03",
-      "name": "Fundamental",
+      "name": "Fundamental Analyst",
       "section": "3. Fundamental Analyst",
       "icon": "\ud83d\udcca",
       "status": "done",
@@ -236,7 +236,7 @@
     {
       "id": "news",
       "num": "04",
-      "name": "News",
+      "name": "News Analyst",
       "section": "4. News Analyst",
       "icon": "\ud83d\udcf0",
       "status": "done",
@@ -291,7 +291,7 @@
     {
       "id": "quant",
       "num": "05",
-      "name": "Quant",
+      "name": "Quant Analyst",
       "section": "5. Quant Analyst",
       "icon": "\ud83e\uddee",
       "status": "done",

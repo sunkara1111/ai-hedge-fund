@@ -11,16 +11,16 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from hedge_fund.branding import FOUNDER_CREDIT, FOUNDER_NAME, PRODUCT_NAME
+from hedge_fund.branding import FOUNDER_CREDIT, FOUNDER_NAME, PRODUCT_NAME, SERVICE_SLUG
 from hedge_fund.demo_data import DEMO_UNIVERSE
 from hedge_fund.graph import run_analysis
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
 app = FastAPI(
-    title="Sunkara AI Fund",
+    title=PRODUCT_NAME,
     description="7-agent investment research dashboard. Founded by Dineshgopi Sunkara. Paper / research only.",
-    version="1.2.0",
+    version="1.3.0",
 )
 
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
@@ -39,10 +39,10 @@ class ScanRequest(BaseModel):
 
 AGENT_META = [
     {"id": "market_scout", "num": "01", "name": "Market Scout", "section": "1. Market Scout", "icon": "🔭"},
-    {"id": "technical", "num": "02", "name": "Technical", "section": "2. Technical Analyst", "icon": "📈"},
-    {"id": "fundamental", "num": "03", "name": "Fundamental", "section": "3. Fundamental Analyst", "icon": "📊"},
-    {"id": "news", "num": "04", "name": "News", "section": "4. News Analyst", "icon": "📰"},
-    {"id": "quant", "num": "05", "name": "Quant", "section": "5. Quant Analyst", "icon": "🧮"},
+    {"id": "technical", "num": "02", "name": "Technical Analyst", "section": "2. Technical Analyst", "icon": "📈"},
+    {"id": "fundamental", "num": "03", "name": "Fundamental Analyst", "section": "3. Fundamental Analyst", "icon": "📊"},
+    {"id": "news", "num": "04", "name": "News Analyst", "section": "4. News Analyst", "icon": "📰"},
+    {"id": "quant", "num": "05", "name": "Quant Analyst", "section": "5. Quant Analyst", "icon": "🧮"},
     {"id": "risk", "num": "06", "name": "Risk Manager", "section": "6. Risk Manager", "icon": "🛡️"},
     {"id": "portfolio", "num": "07", "name": "Portfolio Manager", "section": "7. Portfolio Manager", "icon": "📋"},
 ]
@@ -257,7 +257,7 @@ def index():
 def health():
     return {
         "ok": True,
-        "service": "sunkara-ai-fund",
+        "service": SERVICE_SLUG,
         "product": PRODUCT_NAME,
         "founder": FOUNDER_NAME,
         "founder_credit": FOUNDER_CREDIT,

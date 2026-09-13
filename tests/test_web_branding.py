@@ -1,4 +1,4 @@
-"""Branding and FastAPI contract tests for Sunkara AI Fund."""
+"""Branding and FastAPI contract tests for Dinesh AI Fund."""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ def test_health_branding_and_contract():
     assert response.status_code == 200
     data = response.json()
     assert data["ok"] is True
-    assert data["service"] == "sunkara-ai-fund"
+    assert data["service"] == "dinesh-ai-fund"
     assert data["product"] == PRODUCT_NAME
     assert data["founder"] == FOUNDER_NAME
     assert data["founder_credit"] == FOUNDER_CREDIT
@@ -41,8 +41,23 @@ def test_index_has_product_founder_and_seo():
     assert "Paper / research only" in html
     assert "does not handle real money" in html.lower()
     assert "AI Hedge Fund" not in html
+    assert "Sunkara AI Fund" not in html
+    assert (ROOT / "docs" / "robots.txt").exists()
+    robots = (ROOT / "docs" / "robots.txt").read_text()
+    assert "Allow: /" in robots
+    assert "sitemap.xml" in robots
+    assert (ROOT / "docs" / "sitemap.xml").exists()
+    sitemap = (ROOT / "docs" / "sitemap.xml").read_text()
+    assert "sunkara1111.github.io/ai-hedge-fund/" in sitemap
+    assert "application/ld+json" in html
+    assert "Dineshgopi Sunkara" in html
+    assert 'id="faq"' in html or "FAQ" in html
+    assert 'id="contact"' in html or "Contact" in html
+    assert "SoftwareApplication" in html
+    assert "Organization" in html
+    assert "Built with Claude" not in html
     assert "7-agent research floor" in html
-    assert "Sunkara AI Fund — a 7-agent research floor founded by Dineshgopi Sunkara" in html
+    assert SHARE_TEXT in html
 
 
 def test_analyze_tsla_demo():
@@ -94,6 +109,25 @@ def test_docs_showcase_assets_and_branding():
     assert (ROOT / "docs" / "og-image.png").exists()
     assert (ROOT / "docs" / "og-square.png").exists()
     assert (ROOT / "docs" / ".nojekyll").exists()
+    assert "How it works" in html
+    assert "Combined Result" in html or "Final memo" in html
+    assert "Market Scout" in html
+    assert "Technical Analyst" in html
+    assert "Dinesh AI Fund" in html
+    assert "Sunkara AI Fund" not in html
+    assert (ROOT / "docs" / "robots.txt").exists()
+    robots = (ROOT / "docs" / "robots.txt").read_text()
+    assert "Allow: /" in robots
+    assert "sitemap.xml" in robots
+    assert (ROOT / "docs" / "sitemap.xml").exists()
+    sitemap = (ROOT / "docs" / "sitemap.xml").read_text()
+    assert "sunkara1111.github.io/ai-hedge-fund/" in sitemap
+    assert "application/ld+json" in html
+    assert "Dineshgopi Sunkara" in html
+    assert 'id="faq"' in html or "FAQ" in html
+    assert 'id="contact"' in html or "Contact" in html
+    assert "SoftwareApplication" in html
+    assert "Organization" in html
 
 
 def test_social_images_dimensions():

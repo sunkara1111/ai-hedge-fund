@@ -1,8 +1,10 @@
-"""User-facing product identity for Sunkara AI Fund."""
+"""User-facing product identity for Dinesh AI Fund."""
 
 from __future__ import annotations
 
-PRODUCT_NAME = "Sunkara AI Fund"
+PRODUCT_NAME = "Dinesh AI Fund"
+BRAND_MARK = "DA"
+SERVICE_SLUG = "dinesh-ai-fund"
 FOUNDER_NAME = "Dineshgopi Sunkara"
 FOUNDER_CREDIT = "Founded by Dineshgopi Sunkara"
 PRODUCT_TAGLINE = "7-agent investment research floor"
@@ -16,9 +18,20 @@ DISCLAIMER = (
     "does not execute live trades, and is not a licensed investment adviser."
 )
 GITHUB_URL = "https://github.com/sunkara1111/ai-hedge-fund"
+GITHUB_PROFILE_URL = "https://github.com/sunkara1111"
 PAGES_URL = "https://sunkara1111.github.io/ai-hedge-fund/"
+# No public product email is published yet — buyers should reach the founder via GitHub.
+CONTACT_NOTE = (
+    "Interested in Dinesh AI Fund? Contact founder Dineshgopi Sunkara via GitHub "
+    "@sunkara1111 (add a public email when ready)."
+)
 SHARE_TEXT = (
-    "Sunkara AI Fund — a 7-agent research floor founded by Dineshgopi Sunkara. "
+    "Dinesh AI Fund — a 7-agent research floor founded by Dineshgopi Sunkara. "
     "Paper / research only, not a live trading product. "
     "https://sunkara1111.github.io/ai-hedge-fund/"
+)
+SEO_KEYWORDS = (
+    "Dinesh AI Fund, Dineshgopi Sunkara, AI investment research, multi-agent "
+    "trading research, LangGraph hedge fund demo, paper trading AI agents, "
+    "7-agent investment memo"
 )
