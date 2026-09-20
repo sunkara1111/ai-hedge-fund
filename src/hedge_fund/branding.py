@@ -6,6 +6,7 @@ PRODUCT_NAME = "Dinesh AI Fund"
 BRAND_MARK = "DA"
 SERVICE_SLUG = "dinesh-ai-fund"
 FOUNDER_NAME = "Dineshgopi Sunkara"
+FOUNDER_TITLE = "Senior Controls Engineer · Automation Engineer"
 FOUNDER_CREDIT = "Founded by Dineshgopi Sunkara"
 PRODUCT_TAGLINE = "7-agent investment research floor"
 SHORT_DESCRIPTION = (
