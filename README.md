@@ -152,4 +152,7 @@ Interested buyers or partners can reach founder **Dineshgopi Sunkara** via GitHu
 
 MIT — use at your own risk. Not investment advice.
 
-Founded by Dineshgopi Sunkara.
+## Credits
+
+**Founded by Dineshgopi Sunkara**  
+Senior Controls Engineer · Automation Engineer
