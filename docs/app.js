@@ -9,12 +9,12 @@ const AGENTS = [
 ];
 
 const SAMPLE_FILES = {
-  tsla: "./sample-analysis.json?v=20260913b",
-  nvda: "./sample-nvda.json?v=20260913b",
-  reject: "./sample-reject.json?v=20260913b",
+  tsla: "./sample-analysis.json?v=20260920a",
+  nvda: "./sample-nvda.json?v=20260920a",
+  reject: "./sample-reject.json?v=20260920a",
 };
 
-const CACHE_BUST = "20260913b";
+const CACHE_BUST = "20260920a";
 
 const els = {
   stack: document.getElementById("agent-stack"),

@@ -8,6 +8,7 @@ SERVICE_SLUG = "dinesh-ai-fund"
 FOUNDER_NAME = "Dineshgopi Sunkara"
 FOUNDER_TITLE = "Senior Controls Engineer · Automation Engineer"
 FOUNDER_CREDIT = "Founded by Dineshgopi Sunkara"
+PUBLIC_CREDIT = f"{FOUNDER_CREDIT} — {FOUNDER_TITLE}"
 PRODUCT_TAGLINE = "7-agent investment research floor"
 SHORT_DESCRIPTION = (
     "Seven specialized research agents collaborate via LangGraph to scout, "

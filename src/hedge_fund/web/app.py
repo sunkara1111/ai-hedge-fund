@@ -24,6 +24,8 @@ app = FastAPI(
 )
 
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
+# Pages-style relative ./assets/... paths used by the dashboard hero
+app.mount("/assets", StaticFiles(directory=str(STATIC_DIR / "assets")), name="assets")
 
 
 class AnalyzeRequest(BaseModel):
