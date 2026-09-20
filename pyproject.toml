@@ -37,7 +37,7 @@ hedge-fund = "hedge_fund.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-hedge_fund = ["web/static/*"]
+hedge_fund = ["web/static/*", "web/static/assets/*"]
 
 
 [tool.pytest.ini_options]

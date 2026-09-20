@@ -7,7 +7,15 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-from hedge_fund.branding import FOUNDER_CREDIT, FOUNDER_NAME, PRODUCT_NAME, SHARE_TEXT
+from hedge_fund.branding import (
+    FOUNDER_CREDIT,
+    FOUNDER_NAME,
+    FOUNDER_TITLE,
+    PAGES_URL,
+    PRODUCT_NAME,
+    SHARE_TEXT,
+    SITEMAP_URL,
+)
 from hedge_fund.web.app import app
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,20 +43,26 @@ def test_index_has_product_founder_and_seo():
     assert PRODUCT_NAME in html
     assert FOUNDER_NAME in html
     assert FOUNDER_CREDIT in html
+    assert FOUNDER_TITLE in html
+    assert "Coming Soon" not in html
     assert "og:title" in html
+    assert "og:locale" in html
     assert "twitter:card" in html
     assert "og-image.png" in html
     assert "Paper / research only" in html
+    assert "not financial advice" in html.lower()
     assert "does not handle real money" in html.lower()
     assert "AI Hedge Fund" not in html
     assert "Sunkara AI Fund" not in html
     assert (ROOT / "docs" / "robots.txt").exists()
     robots = (ROOT / "docs" / "robots.txt").read_text()
     assert "Allow: /" in robots
-    assert "sitemap.xml" in robots
+    assert f"Sitemap: {SITEMAP_URL}" in robots
     assert (ROOT / "docs" / "sitemap.xml").exists()
     sitemap = (ROOT / "docs" / "sitemap.xml").read_text()
-    assert "sunkara1111.github.io/ai-hedge-fund/" in sitemap
+    assert f"<loc>{PAGES_URL}</loc>" in sitemap
+    assert SITEMAP_URL in html
+    assert 'href="/sitemap.xml"' not in html
     assert "application/ld+json" in html
     assert "Dineshgopi Sunkara" in html
     assert 'id="faq"' in html or "FAQ" in html
@@ -100,11 +114,16 @@ def test_docs_showcase_assets_and_branding():
     html = (ROOT / "docs" / "index.html").read_text()
     assert PRODUCT_NAME in html
     assert FOUNDER_CREDIT in html
+    assert FOUNDER_TITLE in html
+    assert "Coming Soon" not in html
     assert "sample-analysis.json" in html or "Sample / demo analysis" in html or 'id="examples"' in html
     assert "og:image" in html
+    assert "og:locale" in html
     assert "Sample examples" in html
     assert 'id="examples"' in html
     assert "sample examples" in html.lower()
+    assert "not financial advice" in html.lower()
+    assert SHARE_TEXT in html
     sample = json.loads((ROOT / "docs" / "sample-analysis.json").read_text())
     assert sample["ticker"] == "TSLA"
     assert sample["demo"] is True
@@ -137,13 +156,20 @@ def test_docs_showcase_assets_and_branding():
     assert (ROOT / "docs" / "robots.txt").exists()
     robots = (ROOT / "docs" / "robots.txt").read_text()
     assert "Allow: /" in robots
-    assert "sitemap.xml" in robots
+    assert f"Sitemap: {SITEMAP_URL}" in robots
     assert (ROOT / "docs" / "sitemap.xml").exists()
     sitemap = (ROOT / "docs" / "sitemap.xml").read_text()
-    assert "sunkara1111.github.io/ai-hedge-fund/" in sitemap
-    assert "sample-nvda.json" in sitemap
-    assert "sample-reject.json" in sitemap
-    assert "sample-examples.json" in sitemap
+    assert f"<loc>{PAGES_URL}</loc>" in sitemap
+    assert sitemap.count("<loc>") == 1
+    assert "sample-nvda.json" not in sitemap
+    assert "sample-reject.json" not in sitemap
+    assert SITEMAP_URL in html
+    assert 'href="/sitemap.xml"' not in html
+    assert not (ROOT / "sitemap.xml").exists()
+    not_found = (ROOT / "docs" / "404.html").read_text()
+    assert PRODUCT_NAME in not_found
+    assert FOUNDER_CREDIT in not_found
+    assert "Coming Soon" not in not_found
     assert "application/ld+json" in html
     assert "Dineshgopi Sunkara" in html
     assert 'id="faq"' in html or "FAQ" in html
@@ -154,6 +180,12 @@ def test_docs_showcase_assets_and_branding():
     assert "sample-examples.json" in app_js
     assert "sample-nvda.json" in app_js
     assert "sample-reject.json" in app_js
+
+
+def test_dashboard_serves_hero_asset():
+    response = client.get("/assets/hero-orbit.png")
+    assert response.status_code == 200
+    assert "image" in (response.headers.get("content-type") or "")
 
 
 def test_social_images_dimensions():

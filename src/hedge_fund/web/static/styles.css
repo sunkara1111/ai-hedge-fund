@@ -531,6 +531,11 @@ body {
 }
 .about-card .eyebrow { color: #ffc089; }
 .about-card h2 { margin: 0 0 0.7rem; letter-spacing: -0.03em; }
+.about-card .founder-title {
+  margin: -0.35rem 0 0.85rem;
+  font: 600 0.95rem var(--sans);
+  color: #ffc089;
+}
 .about-card p { margin: 0 0 0.75rem; color: rgba(255,248,240,0.86); max-width: 48rem; }
 .about-card p:last-child { margin-bottom: 0; }
 

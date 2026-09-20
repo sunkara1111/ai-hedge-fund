@@ -8,6 +8,7 @@ SERVICE_SLUG = "dinesh-ai-fund"
 FOUNDER_NAME = "Dineshgopi Sunkara"
 FOUNDER_TITLE = "Senior Controls Engineer · Automation Engineer"
 FOUNDER_CREDIT = "Founded by Dineshgopi Sunkara"
+PUBLIC_CREDIT = f"{FOUNDER_CREDIT} — {FOUNDER_TITLE}"
 PRODUCT_TAGLINE = "7-agent investment research floor"
 SHORT_DESCRIPTION = (
     "Seven specialized research agents collaborate via LangGraph to scout, "
@@ -21,6 +22,8 @@ DISCLAIMER = (
 GITHUB_URL = "https://github.com/sunkara1111/ai-hedge-fund"
 GITHUB_PROFILE_URL = "https://github.com/sunkara1111"
 PAGES_URL = "https://sunkara1111.github.io/ai-hedge-fund/"
+# GitHub Pages is published from docs/, so this file is docs/sitemap.xml.
+SITEMAP_URL = f"{PAGES_URL.rstrip('/')}/sitemap.xml"
 # No public product email is published yet — buyers should reach the founder via GitHub.
 CONTACT_NOTE = (
     "Interested in Dinesh AI Fund? Contact founder Dineshgopi Sunkara via GitHub "

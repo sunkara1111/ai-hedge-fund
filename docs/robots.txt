@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Pages is published from /docs, so this file is the site-root robots.txt.
 Sitemap: https://sunkara1111.github.io/ai-hedge-fund/sitemap.xml
