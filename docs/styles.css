@@ -396,6 +396,13 @@ body {
   padding-top: 0.75rem;
 }
 
+.copyright {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
 @media (max-width: 980px) {
   .layout { grid-template-columns: 1fr; }
   .memo-panel { position: static; max-height: none; }

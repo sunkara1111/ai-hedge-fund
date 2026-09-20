@@ -45,6 +45,8 @@ flowchart TD
 
 ## Setup
 
+**For detailed installation and configuration instructions, see [docs/SETUP.md](docs/SETUP.md)**
+
 ```bash
 cd ai-hedge-fund
 python -m venv .venv
@@ -148,8 +150,18 @@ Share text:
 
 Interested buyers or partners can reach founder **Dineshgopi Sunkara** via GitHub: [github.com/sunkara1111](https://github.com/sunkara1111). No public product email is published yet — add one here when ready.
 
+## Documentation
+
+- [Setup Guide](docs/SETUP.md) — Complete installation and configuration
+- [COPYRIGHT.md](COPYRIGHT.md) — Copyright and intellectual property notice
+- [PATENT_NOTICE.md](PATENT_NOTICE.md) — Patent rights reservation
+
 ## License
 
-MIT — use at your own risk. Not investment advice.
+MIT — use at your own risk. Not investment advice. See [LICENSE](LICENSE) for full terms.
 
 Founded by Dineshgopi Sunkara.
+
+---
+
+**© Dineshgopi Sunkara — Senior Controls Engineer · Automation Engineer**
