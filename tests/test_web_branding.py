@@ -11,8 +11,10 @@ from hedge_fund.branding import (
     FOUNDER_CREDIT,
     FOUNDER_NAME,
     FOUNDER_TITLE,
+    PAGES_URL,
     PRODUCT_NAME,
     SHARE_TEXT,
+    SITEMAP_URL,
 )
 from hedge_fund.web.app import app
 
@@ -55,10 +57,12 @@ def test_index_has_product_founder_and_seo():
     assert (ROOT / "docs" / "robots.txt").exists()
     robots = (ROOT / "docs" / "robots.txt").read_text()
     assert "Allow: /" in robots
-    assert "sitemap.xml" in robots
+    assert f"Sitemap: {SITEMAP_URL}" in robots
     assert (ROOT / "docs" / "sitemap.xml").exists()
     sitemap = (ROOT / "docs" / "sitemap.xml").read_text()
-    assert "sunkara1111.github.io/ai-hedge-fund/" in sitemap
+    assert f"<loc>{PAGES_URL}</loc>" in sitemap
+    assert SITEMAP_URL in html
+    assert 'href="/sitemap.xml"' not in html
     assert "application/ld+json" in html
     assert "Dineshgopi Sunkara" in html
     assert 'id="faq"' in html or "FAQ" in html
@@ -152,13 +156,16 @@ def test_docs_showcase_assets_and_branding():
     assert (ROOT / "docs" / "robots.txt").exists()
     robots = (ROOT / "docs" / "robots.txt").read_text()
     assert "Allow: /" in robots
-    assert "sitemap.xml" in robots
+    assert f"Sitemap: {SITEMAP_URL}" in robots
     assert (ROOT / "docs" / "sitemap.xml").exists()
     sitemap = (ROOT / "docs" / "sitemap.xml").read_text()
-    assert "sunkara1111.github.io/ai-hedge-fund/" in sitemap
+    assert f"<loc>{PAGES_URL}</loc>" in sitemap
     assert sitemap.count("<loc>") == 1
     assert "sample-nvda.json" not in sitemap
     assert "sample-reject.json" not in sitemap
+    assert SITEMAP_URL in html
+    assert 'href="/sitemap.xml"' not in html
+    assert not (ROOT / "sitemap.xml").exists()
     not_found = (ROOT / "docs" / "404.html").read_text()
     assert PRODUCT_NAME in not_found
     assert FOUNDER_CREDIT in not_found
